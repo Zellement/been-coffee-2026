@@ -1,0 +1,31 @@
+## This workflow is triggered when a release is created in the repository.
+## It uses a reusable workflow to deploy the application to production on Netlify.
+## The reusable workflow is defined in the effect-digital/organisation repository.
+##
+## Please ensure you have added a repository secret on Github for:
+## NETLIFY_SITE_ID - Access this from https://app.netlify.com/sites/xxxx-site-name-xxxx/configuration/general
+## NETLIFY_BUILD_HOOK_URL - Access this from https://app.netlify.com/sites/xxxx-site-name-xxxx/configuration/deploys#build-hooks (Select the main branch)
+##
+## Please also update the `environmentUrl` below to the correct URL for your site.
+
+name: Deploy to Production
+
+on:
+  release:
+    types:
+      - released
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: "main"
+
+jobs:
+  deployment:
+    name: Deployment
+    uses: effect-digital/organisation/.github/workflows/netlify-deployment.yml@main
+    with:
+      environment: 'production'
+      environmentUrl: 'https://xxxx-site-name-xxxx.com/'
+    secrets: inherit

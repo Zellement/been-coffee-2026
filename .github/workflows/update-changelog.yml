@@ -1,0 +1,21 @@
+## This workflow is used to update the CHANGELOG file when a release is created.
+## The reusable workflow is defined in the effect-digital/organisation repository.
+## Nothing else is needed, other than having this file in your .github/workflows directory.
+
+name: Update CHANGELOG
+
+on:
+  release:
+    types:
+      - released
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  changelog:
+    name: Changelog
+    uses: effect-digital/organisation/.github/workflows/update-changelog.yml@main
+    secrets:
+      PAT: ${{ secrets.PAT_EFFECTDEV }}

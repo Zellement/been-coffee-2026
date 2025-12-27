@@ -1,0 +1,23 @@
+[build]
+    publish = 'dist'
+    base = '/'
+    ignore = "node netlify/ignore_build.js"
+
+[build.environment]
+  NPM_CONFIG_USERCONFIG = "./netlify/.npmrc"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs]
+    thresholds = { accessibility = 0.9, best_practices = 0.85, seo = 0.9 }
+    fail_deploy_on_score_thresholds = false
+
+[context.production]
+  command = 'npm run build'
+
+[context.deploy-preview]
+  command = 'npm run build'
+
+[context.branch-deploy]
+  command = 'npm run build && cat ./netlify/_headers >> dist/_headers'
