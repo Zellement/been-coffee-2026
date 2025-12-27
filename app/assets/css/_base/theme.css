@@ -1,19 +1,158 @@
-@theme {
+:root {
+    --ui-success: var(--color-green-700);
+    --ui-warning: var(--color-amber-500);
+    --ui-tertiary: var(--color-tuscany-500);
+    --ui-info: var(--color-blue-800);
+
+    /* Neutral */
+    --ui-text-dimmed: var(--ui-color-secondary-400);
+    --ui-text-muted: var(--ui-color-secondary-500);
+    --ui-text-toned: var(--ui-color-secondary-600);
+    --ui-text: var(--ui-color-secondary-900);
+    --ui-text-highlighted: var(--ui-color-secondary-900);
+    --ui-text-inverted: var(--color-white);
+
+    --ui-bg: var(--color-white);
+    --ui-bg-muted: var(--ui-color-secondary-50);
+    --ui-bg-elevated: var(--ui-color-secondary-100);
+    --ui-bg-accented: var(--ui-color-secondary-200);
+    --ui-bg-inverted: var(--ui-color-primary-500);
+
+    --ui-border: var(--ui-color-secondary-200);
+    --ui-border-muted: var(--ui-color-secondary-200);
+    --ui-border-accented: var(--ui-color-secondary-300);
+    --ui-border-inverted: var(--ui-color-secondary-900);
+
+    /* Card */
+    --card-b-top: var(--color-seashell-300);
+    --card-b-left: var(--color-seashell-300);
+    --card-b-right: var(--color-seashell-800);
+    --card-b-bottom: var(--color-seashell-800);
+}
+
+.dark {
+    --ui-success: var(--color-green-400);
+    --ui-warning: var(--color-amber-400);
+    --ui-tertiary: var(--color-tuscany-400);
+    --ui-info: var(--color-blue-400);
+
+    /* Neutral */
+    --ui-text-dimmed: var(--ui-color-primary-400);
+    --ui-text-muted: var(--ui-color-primary-400);
+    --ui-text-toned: var(--ui-color-primary-300);
+    --ui-text: var(--ui-color-primary-100);
+    --ui-text-highlighted: var(--color-white);
+    --ui-text-inverted: var(--ui-color-primary-900);
+
+    --ui-bg: var(--ui-color-primary-900);
+    --ui-bg-muted: var(--ui-color-primary-800);
+    --ui-bg-elevated: var(--ui-color-primary-600);
+    --ui-bg-accented: var(--ui-color-primary-500);
+    --ui-bg-inverted: var(--color-white);
+
+    --ui-border: var(--ui-color-primary-400);
+    --ui-border-muted: var(--ui-color-primary-600);
+    --ui-border-accented: var(--ui-color-primary-400);
+    --ui-border-inverted: var(--color-white);
+
+    /* Card */
+    --card-b-top: var(--color-navy-400);
+    --card-b-left: var(--color-navy-400);
+    --card-b-right: var(--color-navy-900);
+    --card-b-bottom: var(--color-navy-900);
+}
+
+@theme static {
     /* -------------------------
   Colours
   ------------------------- */
+
     --color-black: #000;
     --color-white: #fff;
+
+    --color-green-50: #effdf5;
+    --color-green-100: #d9fbe8;
+    --color-green-200: #b3f5d1;
+    --color-green-300: #75edae;
+    --color-green-400: #00dc82;
+    --color-green-500: #00c16a;
+    --color-green-600: #00a155;
+    --color-green-700: #007f45;
+    --color-green-800: #016538;
+    --color-green-900: #0a5331;
+    --color-green-950: #052e16;
+
+    --color-butterscotch-50: #fffcf7;
+    --color-butterscotch-100: #fef4e3;
+    --color-butterscotch-200: #fde6bb;
+    --color-butterscotch-300: #fcd793;
+    --color-butterscotch-400: #fbc86c;
+    --color-butterscotch-500: #fab944;
+    --color-butterscotch-600: #f9a50d;
+    --color-butterscotch-700: #c88305;
+    --color-butterscotch-800: #925f04;
+    --color-butterscotch-900: #5b3b02;
+    --color-butterscotch-950: #2d1d01;
+
+    --color-tuscany-50: #f2d3c7;
+    --color-tuscany-100: #eec6b7;
+    --color-tuscany-200: #e7ab96;
+    --color-tuscany-300: #df9174;
+    --color-tuscany-400: #d87653;
+    --color-tuscany-500: #d05c32;
+    --color-tuscany-600: #a44726;
+    --color-tuscany-700: #77331b;
+    --color-tuscany-800: #492011;
+    --color-tuscany-900: #1b0c06;
+    --color-tuscany-950: #000000;
+
+    --color-purple-50: #faf5f9;
+    --color-purple-100: #f6edf5;
+    --color-purple-200: #eedceb;
+    --color-purple-300: #e0c1db;
+    --color-purple-400: #cc9ac2;
+    --color-purple-500: #ba7aac;
+    --color-purple-600: #a45e91;
+    --color-purple-700: #8b4b78;
+    --color-purple-800: #744064;
+    --color-purple-900: #623955;
+    --color-purple-950: #47243c;
+
+    --color-navy-50: rgba(244 244 245);
+    --color-navy-100: rgba(232 232 236);
+    --color-navy-200: rgba(198 199 206);
+    --color-navy-300: rgba(164 165 177);
+    --color-navy-400: rgba(95 97 119);
+    --color-navy-500: rgba(27 29 60);
+    --color-navy-600: rgba(24 26 54);
+    --color-navy-700: rgba(16 17 36);
+    --color-navy-800: rgba(12 13 27);
+    --color-navy-900: rgba(8 9 18);
+
+    --color-seashell: oklch(97.251% 0.01983 69.999);
+    --color-seashell-50: oklch(100% 0 none);
+    --color-seashell-100: oklch(99.723% 0.00285 84.559);
+    --color-seashell-200: oklch(99.005% 0.00681 67.746);
+    --color-seashell-300: oklch(98.482% 0.01128 71.902);
+    --color-seashell-400: oklch(97.769% 0.01537 67.646);
+    --color-seashell-500: oklch(97.251% 0.01983 69.999);
+    --color-seashell-600: oklch(96.029% 0.02842 69.169);
+    --color-seashell-700: oklch(94.817% 0.03704 68.659);
+    --color-seashell-800: oklch(93.593% 0.04667 69.283);
+    --color-seashell-900: oklch(92.405% 0.05529 68.812);
+    --color-seashell-950: oklch(91.911% 0.05972 69.415);
 
     /* -------------------------
   Fonts
   ------------------------- */
-    --font-sans: 'Open Sans', sans-serif;
+    --font-sans: 'Roboto', sans-serif;
+    --font-riverside: 'Riverside', sans-serif;
+    --font-riverside-outline: 'Riverside Outline', sans-serif;
+    --font-krete: 'Krete', serif;
 
     /* -------------------------
   Font sizes
   ------------------------- */
-
     /* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1330,14,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
     /* Reset sizes */
