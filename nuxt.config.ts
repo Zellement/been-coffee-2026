@@ -61,8 +61,6 @@ export default defineNuxtConfig({
     //     }
     // },
 
-
-
     icon: {
         customCollections: [
             {
@@ -156,12 +154,12 @@ export default defineNuxtConfig({
         public: {
             MARKER_ID: import.meta.env.MARKER_ID,
             MARKER_ENABLED: import.meta.env.MARKER_ENABLED,
-            GTM_ID: import.meta.env.GTM_ID,
+            GTM_ID: import.meta.env.GTM_ID
         }
     },
 
     vite: {
-        plugins: [tailwindcss()],
+        plugins: [tailwindcss()]
         // optimizeDeps: {
         //     include: [
         //         '@vue/devtools-core',
@@ -182,7 +180,6 @@ export default defineNuxtConfig({
             }
         }
     },
-
 
     devtools: {
         enabled: import.meta.env.NODE_ENV === 'development'
