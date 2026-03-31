@@ -6,8 +6,7 @@ export default defineAppConfig({
             tertiary: 'tuscany',
             info: 'blue',
             error: 'red',
-            success: 'green',
-            'neutral-light': 'slate-100'
+            success: 'green'
         },
 
         badge: {
@@ -49,7 +48,6 @@ export default defineAppConfig({
                 }
             }
         },
-
         stepper: {
             slots: {
                 trigger: 'size-4.5 m-0',

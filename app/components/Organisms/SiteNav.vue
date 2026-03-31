@@ -1,22 +1,4 @@
-<template>
-    <USlideover>
-        <UButton color="neutral" variant="outline"> Menu </UButton>
-        <template #content>
-            <nav class="font-riverside">
-                <ul class="flex gap-4 flex-col">
-                    <li class="relative group" v-for="item in navItems" :key="item.name">
-                        <NuxtLink :href="item.href">{{ item.name }}</NuxtLink>
-                        <ul v-if="item.subnav" class="">
-                            <li v-for="subItem in item.subnav" :key="subItem.name">
-                                <NuxtLink :href="subItem.href">{{ subItem.name }}</NuxtLink>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </template>
-    </USlideover>
-</template>
+<template></template>
 
 <script lang="ts" setup>
 defineProps<{

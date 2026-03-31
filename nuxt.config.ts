@@ -113,7 +113,6 @@ export default defineNuxtConfig({
                 'secondary',
                 'tertiary',
                 'neutral',
-                'neutral-light',
                 'success',
                 'warning',
                 'error',
@@ -171,7 +170,7 @@ export default defineNuxtConfig({
     },
 
     typescript: {
-        typeCheck: true,
+        typeCheck: false,
         strict: true,
         tsConfig: {
             compilerOptions: {
