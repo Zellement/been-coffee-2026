@@ -1,0 +1,33 @@
+# Dependencies
+node_modules
+
+# Build output
+.nuxt
+.nitro
+.output
+dist
+
+# Cache
+.cache
+assets/icons/cache
+
+# Environment & config
+.env
+.npmrc
+!netlify/.npmrc
+
+# OS
+**/.DS_Store
+
+# Logs
+*.log*
+
+# AI
+.claude
+.cursorrules
+.cursor
+.copilot
+
+# Generated files
+assets/svg-transformer-list.ts
+.storyblok

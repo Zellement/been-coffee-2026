@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+/* Base theme */
+@import './_base/theme.css';
+@import './_base/main.css';
+@import './_base/typography.css';
+@import './_base/transitions.css';
+
+@plugin 'tailwindcss-debug-screens';

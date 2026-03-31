@@ -1,0 +1,33 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "[vue]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[tailwindcss]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "tailwindCSS.classAttributes": ["class", "ui"],
+    "tailwindCSS.experimental.classRegex": [["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]]
+}

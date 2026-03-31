@@ -1,0 +1,19 @@
+[build]
+publish = 'dist'
+base = '/'
+ignore = "node netlify/ignore_build.js"
+
+[build.environment]
+NPM_CONFIG_USERCONFIG = "./netlify/.npmrc"
+
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+
+[context.production]
+command = 'npm run build && if [ "$BASIC_AUTH_ENABLED" = "true" ]; then cat ./netlify/_headers >> dist/_headers; fi'
+
+[context.deploy-preview]
+command = 'npm run build && if [ "$BASIC_AUTH_ENABLED" = "true" ]; then cat ./netlify/_headers >> dist/_headers; fi'
+
+[context.branch-deploy]
+command = 'npm run build && if [ "$BASIC_AUTH_ENABLED" = "true" ]; then cat ./netlify/_headers >> dist/_headers; fi'

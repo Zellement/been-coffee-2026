@@ -1,0 +1,37 @@
+name: Coding Standards
+
+on: [push, pull_request]
+
+jobs:
+    coding-standards:
+        name: 'Apply OxLint, Stylelint and Oxfmt coding standards and formatting'
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v1
+              with:
+                  bun-version: latest
+
+            - name: Configure .npmrc for private npm packages
+              run: |
+                  echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_READ_TOKEN }}" > .npmrc
+                  echo "@effect-digital:registry=https://npm.pkg.github.com" >> .npmrc
+
+            - name: Install node modules
+              run: bun install
+
+            - name: Run OxLint
+              run: bun run lint:js
+
+            - name: Run Stylelint
+              run: bun run lint:css
+
+            - name: Type check
+              run: bun run typecheck
+
+            - name: Check formatting
+              run: bun run format:check

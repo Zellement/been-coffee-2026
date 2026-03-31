@@ -1,0 +1,11 @@
+{
+    "extends": ["stylelint-config-standard", "stylelint-config-tailwindcss"],
+    "rules": {
+        "selector-class-pattern": "^[a-z0-9_-]+$",
+        "no-invalid-position-declaration": null,
+        "no-descending-specificity": null,
+        "selector-id-pattern": null,
+        "custom-property-pattern": "^[a-z][a-z0-9-/*]*$"
+    },
+    "ignoreFiles": ["vendor/**/*", "node_modules/**/*", "**/*.min.css"]
+}

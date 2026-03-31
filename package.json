@@ -1,0 +1,50 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "clean:dsstore": "find . -name '.DS_Store' -depth -delete",
+        "dev": "npm run clean:dsstore && nuxt dev",
+        "dev-ssl": "NODE_TLS_REJECT_UNAUTHORIZED=0 npm run clean:dsstore && nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "lint": "npm-run-all --parallel lint:*",
+        "lint:js": "oxlint --fix --vue-plugin --import-plugin --deny-warnings",
+        "lint:css": "stylelint --config ./.stylelintrc --fix \"app/assets/**/*.css\"",
+        "typecheck": "nuxt typecheck",
+        "format": "npm-run-all --serial format:check format:write",
+        "format:check": "oxfmt --check .",
+        "format:write": "oxfmt --write ."
+    },
+    "dependencies": {
+        "@nuxt/image": "^2.0.0",
+        "@nuxt/ui": "^4.5.1",
+        "@pinia/nuxt": "^0.11.3",
+        "@resvg/resvg-js": "^2.6.2",
+        "@takumi-rs/core": "^0.73.1",
+        "isomorphic-dompurify": "2.26.0",
+        "pinia": "^3.0.4",
+        "pinia-plugin-persistedstate": "^4.7.1"
+    },
+    "devDependencies": {
+        "@iconify-json/material-symbols": "^1.2.63",
+        "@nuxt/scripts": "^0.13.2",
+        "@nuxtjs/i18n": "10.2.3",
+        "@nuxtjs/seo": "^4.0.2",
+        "@tailwindcss/vite": "^4.2.2",
+        "npm-run-all": "4.1.5",
+        "nuxt": "4.4.2",
+        "nuxt-viewport": "2.4.0",
+        "oxfmt": "latest",
+        "oxlint": "latest",
+        "stylelint": "17.5.0",
+        "stylelint-config-standard": "^40.0.0",
+        "stylelint-config-tailwindcss": "^1.0.1",
+        "tailwindcss": "^4.2.2",
+        "tailwindcss-debug-screens": "^3.0.1",
+        "typescript": "5.9.3",
+        "vue": "3.5.30",
+        "vue-router": "5.0.4",
+        "vue-tsc": "^3.2.6"
+    }
+}

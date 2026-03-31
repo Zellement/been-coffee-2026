@@ -1,0 +1,9 @@
+{
+    "bracketSpacing": true,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "none",
+    "useTabs": false,
+    "tailwindStylesheet": "./app/assets/css/app.css"
+}
