@@ -1,19 +1,21 @@
 <template>
-    <nav class="font-riverside">
-        <ul class="flex gap-4">
-            <li class="relative group" v-for="item in navItems" :key="item.name">
-                <NuxtLink :href="item.href">{{ item.name }}</NuxtLink>
-                <ul
-                    v-if="item.subnav"
-                    class="absolute w-48 bg-white p-4 rounded shadow-lg group-hover:block hidden"
-                >
-                    <li v-for="subItem in item.subnav" :key="subItem.name">
-                        <NuxtLink :href="subItem.href">{{ subItem.name }}</NuxtLink>
+    <USlideover>
+        <UButton color="neutral" variant="outline"> Menu </UButton>
+        <template #content>
+            <nav class="font-riverside">
+                <ul class="flex gap-4 flex-col">
+                    <li class="relative group" v-for="item in navItems" :key="item.name">
+                        <NuxtLink :href="item.href">{{ item.name }}</NuxtLink>
+                        <ul v-if="item.subnav" class="">
+                            <li v-for="subItem in item.subnav" :key="subItem.name">
+                                <NuxtLink :href="subItem.href">{{ subItem.name }}</NuxtLink>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
-            </li>
-        </ul>
-    </nav>
+            </nav>
+        </template>
+    </USlideover>
 </template>
 
 <script lang="ts" setup>

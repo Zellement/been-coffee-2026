@@ -29,7 +29,7 @@
     --card-b-right: var(--color-seashell-800);
     --card-b-bottom: var(--color-seashell-800);
 }
-
+/* 
 .dark {
     --ui-success: var(--color-green-400);
     --ui-warning: var(--color-amber-400);
@@ -60,7 +60,7 @@
     --card-b-left: var(--color-navy-400);
     --card-b-right: var(--color-navy-900);
     --card-b-bottom: var(--color-navy-900);
-}
+} */
 
 @theme static {
     /* -------------------------
