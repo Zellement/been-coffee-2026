@@ -36,7 +36,6 @@
     --ui-tertiary: var(--color-tuscany-400);
     --ui-info: var(--color-blue-400);
 
-    /* Neutral */
     --ui-text-dimmed: var(--ui-color-primary-400);
     --ui-text-muted: var(--ui-color-primary-400);
     --ui-text-toned: var(--ui-color-primary-300);
@@ -54,12 +53,6 @@
     --ui-border-muted: var(--ui-color-primary-600);
     --ui-border-accented: var(--ui-color-primary-400);
     --ui-border-inverted: var(--color-white);
-
-    /* Card */
-    --card-b-top: var(--color-navy-400);
-    --card-b-left: var(--color-navy-400);
-    --card-b-right: var(--color-navy-900);
-    --card-b-bottom: var(--color-navy-900);
 } */
 
 @theme static {
