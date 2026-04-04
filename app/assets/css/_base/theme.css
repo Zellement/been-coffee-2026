@@ -183,6 +183,10 @@
     --text-3xl: clamp(2.1773rem, 1.7003rem + 2.3847vw, 3.6826rem);
     --text-3xl--line-height: calc(2.25 / 1.875);
 
+    /* Step 5: 41.81px → 78.58px */
+    --text-4xl: clamp(2.5176rem, 1.9003rem + 3.7878vw, 4.9113rem);
+    --text-4xl--line-height: calc(2.25 / 1.875);
+
     /* -------------------------
   Aspect ratios
   ------------------------- */
