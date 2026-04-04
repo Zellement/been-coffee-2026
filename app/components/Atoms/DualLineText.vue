@@ -2,7 +2,7 @@
     <span class="relative font-riverside">
         <component :class="backgroundClass" :is="level">{{ text }}</component>
         <span
-            class="absolute w-full h-full inset-0 translate-x-1 translate-y-1 font-riverside-outline whitespace-nowrap"
+            class="absolute w-full h-full inset-0 translate-x-0.5 translate-y-1 font-riverside-outline whitespace-nowrap"
             aria-hidden="true"
             :class="outlineClass"
         >
