@@ -78,3 +78,21 @@ picture img {
         gap: calc(var(--spacing) * 5);
     }
 }
+
+.block-clip--left {
+    clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
+}
+
+.block-clip--right {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 98%);
+}
+
+@media (width >= 90rem) {
+    .block-clip--left {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    .block-clip--right {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    }
+}

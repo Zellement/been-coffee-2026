@@ -187,6 +187,10 @@
     --text-4xl: clamp(2.5176rem, 1.9003rem + 3.7878vw, 4.9113rem);
     --text-4xl--line-height: calc(2.25 / 1.875);
 
+    /* Step 6: 50.17px → 131.09px */
+    --text-5xl: clamp(2.9734rem, 2.1003rem + 6.0428vw, 6.5449rem);
+    --text-5xl--line-height: calc(2.25 / 1.875);
+
     /* -------------------------
   Aspect ratios
   ------------------------- */
@@ -197,6 +201,7 @@
     /* -------------------------
   Breakpoints/screens
   ------------------------- */
+    --breakpoint-*: initial;
     --breakpoint-3xs: 21rem; /* 336px */
     --breakpoint-2xs: 25.625rem; /* 410px */
     --breakpoint-xs: 30rem; /* 480px */
@@ -210,6 +215,7 @@
     /* -------------------------
   Containers
   ------------------------- */
+    --container-*: initial;
     --container-3xs: 21rem; /* 336px */
     --container-2xs: 25.625rem; /* 410px */
     --container-xs: 30rem; /* 480px */
