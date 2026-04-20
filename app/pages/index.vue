@@ -3,11 +3,18 @@
         <div class="bg-linear-to-br from-navy-500 via-navy-500 to-navy-700">
             <div class="w-full h-[105dvh] relative block-clip--left">
                 <video
+                    src="/hero-mob.mp4"
+                    autoplay
+                    loop
+                    muted
+                    class="w-full xl:hidden fixed inset-0 h-full object-cover"
+                ></video>
+                <video
                     src="/hero.mp4"
                     autoplay
                     loop
                     muted
-                    class="w-full fixed inset-0 h-full object-cover"
+                    class="w-full hidden xl:block fixed inset-0 h-full object-cover"
                 ></video>
                 <div
                     class="absolute inset-0 flex flex-col items-start justify-end p-4 bg-opacity-50 text-white pb-[calc(5dvh+2rem)]"
