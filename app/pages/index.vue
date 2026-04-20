@@ -1,57 +1,7 @@
 <template>
     <UPage>
         <div class="bg-linear-to-br from-navy-500 via-navy-500 to-navy-700">
-            <div class="w-full h-[105dvh] relative block-clip--left">
-                <video
-                    src="/hero-mob.mp4"
-                    autoplay
-                    loop
-                    muted
-                    class="w-full xl:hidden fixed inset-0 h-full object-cover"
-                ></video>
-                <video
-                    src="/hero.mp4"
-                    autoplay
-                    loop
-                    muted
-                    class="w-full hidden xl:block fixed inset-0 h-full object-cover"
-                ></video>
-                <div
-                    class="absolute inset-0 flex flex-col items-start justify-end p-4 bg-opacity-50 text-white pb-[calc(5dvh+2rem)]"
-                >
-                    <div class="container container-px flex flex-col">
-                        <DualLineText
-                            text="Been Coffee"
-                            level="h1"
-                            class="text-5xl lg:text-4xl"
-                            outline-class="text-butterscotch-500"
-                        />
-                        <div class="flex flex-col sm:flex-row sm:gap-2">
-                            <DualLineText
-                                text="Award Winning."
-                                level="h2"
-                                class="text-2xl"
-                                outline-class="text-butterscotch-500"
-                            />
-                            <DualLineText
-                                text="Independent."
-                                level="h2"
-                                class="text-2xl"
-                                outline-class="text-butterscotch-500"
-                            />
-                        </div>
-                        <p class="text-lg mt-4 font-krete">And now in two locations.</p>
-                        <div class="flex gap-2 mt-4">
-                            <UButton href="/locations/willington" color="neutral" variant="subtle">
-                                Willington
-                            </UButton>
-                            <UButton href="/locations/long-eaton" color="neutral" variant="subtle">
-                                Long Eaton
-                            </UButton>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <HeroHomepage />
             <div class="container px-8 text-white">
                 <p class="text-center max-w-160 mx-auto py-20 text-lg font-krete">
                     <span class="text-butterscotch-500">Award-winning</span>,
@@ -64,13 +14,31 @@
                 </p>
             </div>
         </div>
-        <div class="container text-white">
+        <div class="container">
             <DualLineText
                 text="Award-winning."
                 level="h2"
                 class="text-2xl block"
                 outline-class="text-red-500"
             />
+
+            <div class="grid md:grid-cols-2 xl:grid-cols-4">
+                <div
+                    v-for="(award, index) in awards"
+                    :key="index"
+                    class="flex flex-col items-center gap-4 p-4"
+                >
+                    <img :src="award.logoUrl" alt="Award Logo" class="w-32 h-auto" />
+                    <div class="text-center text-sm font-krete">
+                        <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
+                            <p class="font-bold">{{ yearGroup.year }}</p>
+                            <p v-for="(detail, di) in yearGroup.details" :key="di">
+                                {{ detail.title }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </UPage>
 </template>
@@ -86,4 +54,67 @@ useHead({
         }
     ]
 })
+
+interface AwardDetail {
+    title: string
+}
+
+interface AwardYear {
+    year: string
+    details: AwardDetail[]
+}
+
+interface Award {
+    logoUrl: string
+    details: AwardYear[]
+}
+
+const awards: Award[] = [
+    {
+        logoUrl: '/logos/luxlife.png',
+        details: [
+            {
+                year: '2026',
+                details: [
+                    { title: 'Best Indy Coffee Shop Derbyshire' },
+                    { title: 'Sustainability Excellence Award' }
+                ]
+            },
+            {
+                year: '2025',
+                details: [
+                    { title: 'Derby Coffee Shop of the Year' },
+                    { title: 'Best Independent Coffee Shop Derbyshire' }
+                ]
+            }
+        ]
+    },
+    {
+        logoUrl: '/logos/good-food.jpg',
+        details: [
+            {
+                year: '2025',
+                details: [{ title: 'Gold Seal' }]
+            },
+            {
+                year: '2024',
+                details: [
+                    { title: 'Gold Seal' },
+                    { title: 'Customer Service Excellence Award' },
+                    { title: 'Artisan Coffee Shop of the Year' },
+                    { title: 'Best Indy Coffee Shop Derby' },
+                    { title: 'Best Local Coffee Shop Derbyshire' }
+                ]
+            },
+            {
+                year: '2023',
+                details: [
+                    { title: 'Blue Ribbon' },
+                    { title: 'Best Cafe in Derby' },
+                    { title: 'Best Indy Coffee Shop' }
+                ]
+            }
+        ]
+    }
+]
 </script>
