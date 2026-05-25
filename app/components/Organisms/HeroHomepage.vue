@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-[105dvh] relative block-clip--left">
+    <div class="w-full h-dvh relative block-clip--left">
         <video
             src="/hero-mob.mp4"
             autoplay

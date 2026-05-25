@@ -1,6 +1,6 @@
 <template>
     <UPage>
-        <div class="bg-linear-to-br from-navy-500 via-navy-500 to-navy-700">
+        <div class="bg-linear-to-br from-navy-400 via-navy-500 to-navy-700">
             <HeroHomepage />
             <div class="container px-8 text-white">
                 <p class="text-center max-w-160 mx-auto py-20 text-lg font-krete">
@@ -14,27 +14,33 @@
                 </p>
             </div>
         </div>
-        <div class="container">
+        <div class="container py-16 text-center">
             <DualLineText
                 text="Award-winning."
                 level="h2"
-                class="text-2xl block"
-                outline-class="text-red-500"
+                class="text-3xl block text-tuscany-500 mb-12"
+                outline-class="text-navy-500 "
             />
 
-            <div class="grid md:grid-cols-2 xl:grid-cols-4">
+            <div class="grid md:grid-cols-2 xl:grid-cols-3">
                 <div
-                    v-for="(award, index) in awards"
-                    :key="index"
-                    class="flex flex-col items-center gap-4 p-4"
+                    v-for="(column, colIndex) in awardColumns"
+                    :key="colIndex"
+                    class="flex flex-col items-center gap-8 p-4"
                 >
-                    <img :src="award.logoUrl" alt="Award Logo" class="w-32 h-auto" />
-                    <div class="text-center text-sm font-krete">
-                        <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
-                            <p class="font-bold">{{ yearGroup.year }}</p>
-                            <p v-for="(detail, di) in yearGroup.details" :key="di">
-                                {{ detail.title }}
-                            </p>
+                    <div
+                        v-for="(award, awardIndex) in column.awards"
+                        :key="awardIndex"
+                        class="flex flex-col items-center gap-4 w-full"
+                    >
+                        <img :src="award.logoUrl" alt="Award Logo" class="w-32 h-auto" />
+                        <div class="text-center text-sm font-krete">
+                            <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
+                                <p class="font-bold">{{ yearGroup.year }}</p>
+                                <p v-for="(detail, di) in yearGroup.details" :key="di">
+                                    {{ detail.title }}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,51 +75,86 @@ interface Award {
     details: AwardYear[]
 }
 
-const awards: Award[] = [
+interface AwardColumn {
+    awards: Award[]
+}
+
+const awardColumns: AwardColumn[] = [
     {
-        logoUrl: '/logos/luxlife.png',
-        details: [
+        awards: [
             {
-                year: '2026',
+                logoUrl: '/logos/luxlife.png',
                 details: [
-                    { title: 'Best Indy Coffee Shop Derbyshire' },
-                    { title: 'Sustainability Excellence Award' }
-                ]
-            },
-            {
-                year: '2025',
-                details: [
-                    { title: 'Derby Coffee Shop of the Year' },
-                    { title: 'Best Independent Coffee Shop Derbyshire' }
+                    {
+                        year: '2026',
+                        details: [
+                            { title: 'Best Independent Coffee Shop 2026' },
+                            { title: 'Sustainability Excellence Award' }
+                        ]
+                    },
+                    {
+                        year: '2025',
+                        details: [
+                            { title: 'Derby Coffee Shop of the Year' },
+                            { title: 'Best Independent Coffee Shop Derbyshire' }
+                        ]
+                    }
                 ]
             }
         ]
     },
     {
-        logoUrl: '/logos/good-food.jpg',
-        details: [
+        awards: [
             {
-                year: '2025',
-                details: [{ title: 'Gold Seal' }]
-            },
-            {
-                year: '2024',
+                logoUrl: '/logos/good-food.jpg',
                 details: [
-                    { title: 'Gold Seal' },
-                    { title: 'Customer Service Excellence Award' },
-                    { title: 'Artisan Coffee Shop of the Year' },
-                    { title: 'Best Indy Coffee Shop Derby' },
-                    { title: 'Best Local Coffee Shop Derbyshire' }
-                ]
-            },
-            {
-                year: '2023',
-                details: [
-                    { title: 'Blue Ribbon' },
-                    { title: 'Best Cafe in Derby' },
-                    { title: 'Best Indy Coffee Shop' }
+                    {
+                        year: '2025',
+                        details: [{ title: 'Good Food Award Gold Seal' }]
+                    },
+                    {
+                        year: '2024',
+                        details: [
+                            { title: 'Good Food Award Winner' },
+                        ]
+                    },
+                    {
+                        year: '2023',
+                        details: [
+                            { title: 'Good Food Award Winner' },
+                        ]
+                    },
+                    {
+                        year: '2022',
+                        details: [
+                            { title: 'Good Food Award Blue Ribbon' },
+                        ]
+                    }
                 ]
             }
+        ]
+    },
+    {
+        awards: [
+
+            {
+                logoUrl: '/logos/business-concept.png',
+                details: [
+                    {
+                        year: '2024',
+                        details: [{ title: 'Best Independent Coffee Shop Derby' }]
+                    }
+                ]
+            },
+            {
+                logoUrl: '/logos/rg.png',
+                details: [
+                    {
+                        year: '2023',
+                        details: [{ title: 'Best Cafe in Derby' }]
+                    }
+                ]
+            },
         ]
     }
 ]
