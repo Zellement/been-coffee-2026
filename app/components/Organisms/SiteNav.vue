@@ -2,7 +2,7 @@
   <UNavigationMenu
     :items="items"
     color="neutral"
-    class="w-full max-w-160 justify-end"
+    class="w-full max-w-160 justify-end pointer-events-auto"
   >
     <template #locations-content="{ item }: { item: NavigationMenuItem }">
       <ul class="grid gap-2 w-full p-4 lg:grid-cols-2">

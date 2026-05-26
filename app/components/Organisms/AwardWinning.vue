@@ -1,29 +1,35 @@
 <template>
-  <DualLineText
-    text="Award-winning."
-    level="h2"
-    class="text-3xl block text-tuscany-500 mb-12"
-    outline-class="text-navy-500 "
-  />
+  <div class="container py-16 text-center">
+    <DualLineText
+      text="Award-winning."
+      level="h2"
+      class="text-3xl block text-tuscany-500 mb-12"
+      outline-class="text-navy-500 "
+    />
 
-  <div class="flex flex-col lg:grid lg:grid-cols-3">
-    <div
-      v-for="(column, colIndex) in awardColumns"
-      :key="colIndex"
-      class="flex flex-col items-center gap-8 p-4"
-    >
+    <div class="flex flex-col lg:grid lg:grid-cols-3">
       <div
-        v-for="(award, awardIndex) in column.awards"
-        :key="awardIndex"
-        class="flex flex-col items-center gap-4 w-full"
+        v-for="(column, colIndex) in awardColumns"
+        :key="colIndex"
+        class="flex flex-col items-center gap-8 p-4"
       >
-        <img :src="award.logoUrl" alt="Award Logo" class="w-28 h-auto" />
-        <div class="text-center text-sm font-krete">
-          <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
-            <p class="font-bold">{{ yearGroup.year }}</p>
-            <p v-for="(detail, di) in yearGroup.details" :key="di">
-              {{ detail.title }}
-            </p>
+        <div
+          v-for="(award, awardIndex) in column.awards"
+          :key="awardIndex"
+          class="flex flex-col items-center gap-4 w-full"
+        >
+          <img :src="award.logoUrl" alt="Award Logo" class="w-28 h-auto" />
+          <div class="text-center text-sm font-krete">
+            <div
+              v-for="(yearGroup, yi) in award.details"
+              :key="yi"
+              class="mb-2"
+            >
+              <p class="font-bold">{{ yearGroup.year }}</p>
+              <p v-for="(detail, di) in yearGroup.details" :key="di">
+                {{ detail.title }}
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -13,6 +13,11 @@ declare global {
         subItems?: NavItem[]
     }
 
+    interface ImageryItem {
+        src: string
+        alt: string
+    }
+
     interface UtmParameters {
         [key: `utm_${string}`]: string
     }

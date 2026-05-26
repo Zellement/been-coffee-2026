@@ -9,6 +9,12 @@ export default defineAppConfig({
             success: 'green'
         },
 
+        button: {
+            slots: {
+                base: 'cursor-pointer'
+            }
+        },
+
         badge: {
             variants: {
                 size: {
