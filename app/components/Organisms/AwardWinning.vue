@@ -6,7 +6,7 @@
     outline-class="text-navy-500 "
   />
 
-  <div class="grid md:grid-cols-2 xl:grid-cols-3">
+  <div class="flex flex-col lg:grid lg:grid-cols-3">
     <div
       v-for="(column, colIndex) in awardColumns"
       :key="colIndex"
@@ -17,7 +17,7 @@
         :key="awardIndex"
         class="flex flex-col items-center gap-4 w-full"
       >
-        <img :src="award.logoUrl" alt="Award Logo" class="w-32 h-auto" />
+        <img :src="award.logoUrl" alt="Award Logo" class="w-28 h-auto" />
         <div class="text-center text-sm font-krete">
           <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
             <p class="font-bold">{{ yearGroup.year }}</p>

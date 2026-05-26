@@ -19,19 +19,27 @@
         <AwardWinning />
       </div>
     </div>
-    <div class="bg-linear-to-tl from-tuscany-400 to-tuscany-600">
-      <div class="container text-white py-16 text-center">
-        <DualLineText
-          text="Bagels, Bacon & Brownies."
-          level="h2"
-          class="text-3xl block text-butterscotch-500 mb-12"
-          outline-class="text-white"
-        />
-        <p class="max-w-160 mx-auto font-krete text-lg">
-          We offer a variety of both food and drink options, including thick cut
-          butcher bacon & Philadelphia bagels, award-winning sausage cobs and
-          bacon cobs, paninis, handmade sausage rolls and traditional scotch
-          eggs, and much, much more.
+    <IndexGallery />
+
+    <div class="bg-linear-to-br from-seashell-50 to-seashell-600">
+      <div class="container px-8 text-navy flex gap-12 flex-col py-20">
+        <ul class="flex flex-wrap gap-2 items-center justify-center w-full">
+          <u-badge icon="i-healthicons-gluten-free" size="xl" color="tertiary"
+            >Low-gluten options</u-badge
+          >
+          <u-badge icon="i-iconoir-vegan-circle" size="xl" color="tertiary"
+            >Vegan friendly</u-badge
+          >
+        </ul>
+        <p class="text-center max-w-160 mx-auto text-lg font-krete">
+          We've spent countless hours searching for excellent
+          <span class="text-tuscany-500">vegan</span> and
+          <span class="text-tuscany-500">low-gluten</span> options so that you
+          don't have to.
+        </p>
+        <p class="text-center max-w-160 mx-auto text-lg font-krete">
+          We offer low-gluten bagel alternatives, paninis and and many of our
+          cakes are either vegan and/or low-gluten.
         </p>
       </div>
     </div>
@@ -39,6 +47,8 @@
 </template>
 
 <script setup lang="ts">
+import { IndexKind } from "typescript"
+
 useHead({
   title:
     "Been Coffee - Award-winning coffee shops | Willington, Derby & Long Eaton, Nottingham",

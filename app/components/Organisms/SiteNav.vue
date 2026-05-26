@@ -41,6 +41,11 @@ const items = ref<NavigationMenuItem[]>([
     to: "/",
   },
   {
+    label: "Gallery",
+    icon: "i-lucide-image",
+    to: "/gallery",
+  },
+  {
     label: "Locations",
     icon: "i-lucide-map-pin",
     to: "/locations",
