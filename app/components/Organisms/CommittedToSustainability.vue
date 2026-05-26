@@ -1,11 +1,19 @@
 <template>
   <div class="container px-8 text-white flex gap-12 flex-col py-20">
-    <DualLineText
-      text="Committed to sustainability."
-      level="h2"
-      class="text-3xl mx-auto"
-      outline-class="text-butterscotch-500"
-    />
+    <h2 class="flex flex-col">
+      <DualLineText
+        text="Committed"
+        level="span"
+        class="text-3xl mx-auto"
+        outline-class="text-butterscotch-500"
+      />
+      <DualLineText
+        text="to sustainability."
+        level="span"
+        class="text-3xl mx-auto"
+        outline-class="text-butterscotch-500"
+      />
+    </h2>
     <p class="text-center max-w-160 mx-auto text-lg font-krete">
       We choose brands and partners who share our
       <span class="text-butterscotch-500">commitment to sustainability</span>,

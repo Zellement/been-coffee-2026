@@ -1,11 +1,19 @@
 <template>
-  <div class="container text-white py-16 text-center">
-    <DualLineText
-      text="Bagels, Bacon & Brownies."
-      level="h2"
-      class="text-3xl block text-butterscotch-500 mb-12"
-      outline-class="text-white"
-    />
+  <div class="container text-white py-16 text-center container-px">
+    <h2 class="flex flex-col mb-12">
+      <DualLineText
+        text="Bagels,"
+        level="span"
+        class="text-3xl text-butterscotch-500 mx-auto"
+        outline-class="text-white"
+      />
+      <DualLineText
+        text="Bacon & Brownies."
+        level="span"
+        class="text-3xl text-butterscotch-500 mx-auto"
+        outline-class="text-white"
+      />
+    </h2>
     <p class="max-w-160 mx-auto font-krete text-lg">
       We offer a variety of both food and drink options, including
       <span class="text-butterscotch-500"

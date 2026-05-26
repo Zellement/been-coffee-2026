@@ -24,14 +24,22 @@
       <IndexGallery />
     </section>
 
-    <section class="bg-linear-to-br from-seashell-50 to-seashell-600">
+    <section class="from-seashell-50 to-seashell-600">
       <div class="container px-8 text-navy-500 flex gap-12 flex-col py-20">
-        <DualLineText
-          text="Vegan and Low-Gluten Options."
-          level="h2"
-          class="text-3xl mx-auto"
-          outline-class="text-butterscotch-500"
-        />
+        <h2 class="flex flex-col">
+          <DualLineText
+            text="Vegan and"
+            level="span"
+            class="text-3xl mx-auto"
+            outline-class="text-butterscotch-500"
+          />
+          <DualLineText
+            text="Low-Gluten Options."
+            level="span"
+            class="text-3xl mx-auto"
+            outline-class="text-butterscotch-500"
+          />
+        </h2>
         <ul class="flex flex-wrap gap-2 items-center justify-center w-full">
           <u-badge icon="i-iconoir-vegan-circle" size="lg" color="tertiary">
             Vegan friendly
