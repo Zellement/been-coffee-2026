@@ -5,10 +5,10 @@
   >
     <div class="container container-px grid-layout">
       <div
-        class="relative col-span-full row-start-1 flex gap-2 justify-between"
+        class="relative col-span-full row-start-1 flex items-center flex-col md:flex-row gap-2 justify-between"
       >
         <SiteBrand />
-        <SiteNav />
+        <SiteNav class="justify-center md:justify-end" />
         <!-- <ButtonMenu /> -->
       </div>
     </div>

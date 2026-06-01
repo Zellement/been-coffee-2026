@@ -26,7 +26,7 @@
       <span class="text-butterscotch-500">traditional scotch eggs</span>, and
       much, much more.
     </p>
-    <u-carousel
+    <UCarousel
       class="mt-20 mx-20"
       :ui="{
         item: 'basis-full md:basis-1/2 xl:basis-1/3 aspect-square',
@@ -42,10 +42,10 @@
         :alt="item.alt"
         class="object-cover h-full w-full rounded-lg overflow-hidden"
       />
-    </u-carousel>
-    <u-button class="mt-20" color="secondary" to="/gallery">
+    </UCarousel>
+    <UButton class="mt-20" color="secondary" to="/gallery">
       View More Photos
-    </u-button>
+    </UButton>
   </div>
 </template>
 

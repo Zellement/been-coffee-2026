@@ -2,7 +2,7 @@
   <UNavigationMenu
     :items="items"
     color="neutral"
-    class="w-full max-w-160 justify-end pointer-events-auto"
+    class="w-full max-w-160 pointer-events-auto"
   >
     <template #locations-content="{ item }: { item: NavigationMenuItem }">
       <ul class="grid gap-2 w-full p-4 lg:grid-cols-2">
@@ -33,6 +33,7 @@
 
 <script setup lang="ts">
 import type { NavigationMenuItem } from "@nuxt/ui"
+import childrenNav from "~/data/locations.json"
 
 const items = ref<NavigationMenuItem[]>([
   {
@@ -50,25 +51,7 @@ const items = ref<NavigationMenuItem[]>([
     icon: "i-lucide-map-pin",
     to: "/locations",
     slot: "locations" as const,
-    children: [
-      {
-        label: "Willington (DE65 6DX)",
-        labelSuffix: "Since 2021",
-        labelSuffixClass: "text-xs text-muted uppercase tracking-wide",
-        description:
-          "A large car park, great for commuters, business meets and groups of friends.",
-        to: "/locations/willington",
-      },
-      {
-        label: "Long Eaton (NG10 3RJ)",
-        labelSuffix: "NEW",
-        labelSuffixClass:
-          "text-xs rounded bg-navy-500 text-butterscotch-500 py-0.5 px-1 uppercase tracking-wide",
-        description:
-          "Cosy and welcoming, conveniently placed near West Park and the train station.",
-        to: "/locations/long-eaton",
-      },
-    ],
+    children: childrenNav,
   },
 ])
 </script>

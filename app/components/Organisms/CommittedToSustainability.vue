@@ -19,7 +19,7 @@
       <span class="text-butterscotch-500">commitment to sustainability</span>,
       and we're always looking for ways to reduce our environmental impact.
     </p>
-    <u-carousel
+    <UCarousel
       class="sm:mx-20"
       :ui="{
         item: 'basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/6 aspect-square',
@@ -33,13 +33,13 @@
       <div
         class="bg-white flex items-center justify-center h-full w-full rounded-lg overflow-hidden p-4"
       >
-        <nuxt-img
+        <NuxtImg
           :src="item.src"
           :alt="item.alt"
           class="object-contain h-full w-full rounded-lg overflow-hidden"
         />
       </div>
-    </u-carousel>
+    </UCarousel>
   </div>
 </template>
 
