@@ -1,6 +1,17 @@
 <template>
   <UPage>
-    <HeroStandard title="Willington" />
+    <HeroStandard title="Willington">
+      <UModal fullscreen title="Order for collection">
+        <UButton variant="outline" color="secondary" target="_blank">Order for collection</UButton>
+
+        <template #body>
+          <iframe
+            src="https://goodeats.io/beencoffee?embed_outlet=beencoffee"
+            class="w-full h-full"
+          />
+        </template>
+      </UModal>
+    </HeroStandard>
     <div class="container w-full lg:hidden">
       <div class="overflow-x-auto flex gap-2 p-2 pb-3">
         <UButton
