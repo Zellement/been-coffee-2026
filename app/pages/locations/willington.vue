@@ -71,29 +71,31 @@
             level="span"
           />
         </h2>
-        <UAccordion multiple :unmount-on-hide="false" :items="accordionItems" class="w-full">
+        <UAccordion type="multiple" :unmount-on-hide="false" :items="accordionItems" class="w-full">
           <template #body="{ item }">
             <MDC :value="item.content ?? ''" unwrap="p" />
           </template>
           <template #grid="{ item }">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-              <div
-                v-for="subitem in (
-                  item as {
-                    events?: Event[]
-                  }
-                ).events || []"
-                :key="subitem.title"
-              >
-                <p class="font-medium text-tuscany-500">{{ subitem.title }}</p>
-                <p class="text-sm italic mb-2">{{ subitem.time }}</p>
-                <p class="text-sm">{{ subitem.content }}</p>
-                <p class="text-sm mt-2">
-                  Contact:
-                  <a :href="subitem.contact" class="text-tuscany-500 underline">{{
-                    subitem.contactText
-                  }}</a>
-                </p>
+            <div class="@container">
+              <div class="grid grid-cols-1 @sm:grid-cols-2 gap-2">
+                <div
+                  v-for="subitem in (
+                    item as {
+                      events?: Event[]
+                    }
+                  ).events || []"
+                  :key="subitem.title"
+                >
+                  <p class="font-medium text-tuscany-500">{{ subitem.title }}</p>
+                  <p class="text-sm italic mb-2">{{ subitem.time }}</p>
+                  <p class="text-sm">{{ subitem.content }}</p>
+                  <p class="text-sm mt-2">
+                    Contact:
+                    <a :href="subitem.contact" class="text-tuscany-500 underline">{{
+                      subitem.contactText
+                    }}</a>
+                  </p>
+                </div>
               </div>
             </div>
           </template>
@@ -117,6 +119,11 @@ const pageNav = [
 
 const accordionItems: AccordionItem[] = [
   ...Faqs,
+  {
+    label: 'What is parking like?',
+    content:
+      "Loads of it! Unless it's super busy, you can usually find a space very close to the shop. We are located in the Derby & Burton Services, which has ample parking for cars, motorbikes and coaches.",
+  },
   {
     label: 'What events do you host?',
     slot: 'grid',

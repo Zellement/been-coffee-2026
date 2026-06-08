@@ -58,7 +58,7 @@
             level="span"
           />
         </h2>
-        <UAccordion multiple :unmount-on-hide="false" :items="accordionItems" class="w-full">
+        <UAccordion type="multiple" :unmount-on-hide="false" :items="accordionItems" class="w-full">
           <template #body="{ item }">
             <MDC :value="item.content ?? ''" unwrap="p" />
           </template>
@@ -104,7 +104,11 @@ const pageNav = [
 
 const accordionItems: AccordionItem[] = [
   ...Faqs,
-
+  {
+    label: 'What is parking like?',
+    content:
+      'There is fast turnover of cars on a daily basis as people tend to visit and go. There is street parking over the road, too, for busier days.',
+  },
   {
     label: 'Do you have highchairs and baby changing facilities?',
     content:
