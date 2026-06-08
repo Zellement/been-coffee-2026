@@ -9,6 +9,12 @@ export default defineAppConfig({
       success: 'green',
     },
 
+    accordion: {
+      slots: {
+        trigger: 'font-riverside text-base cursor-pointer',
+      },
+    },
+
     button: {
       slots: {
         base: 'cursor-pointer',
