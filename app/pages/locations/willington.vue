@@ -61,6 +61,9 @@
           />
         </h2>
         <UAccordion multiple :unmount-on-hide="false" :items="accordionItems" class="w-full">
+          <template #body="{ item }">
+            <MDC :value="item.content ?? ''" unwrap="p" />
+          </template>
           <template #grid="{ item }">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
               <div

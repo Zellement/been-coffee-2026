@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     'nuxt-viewport',
     '@pinia/nuxt',
+    '@nuxtjs/mdc',
   ],
 
   experimental: {
