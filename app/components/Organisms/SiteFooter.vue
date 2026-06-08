@@ -1,26 +1,55 @@
 <template>
-    <div
-        class="transiton-opacity site-footer mt-32 flex bg-white/20 text-current backdrop-blur-lg duration-1000 hover:opacity-100 dark:bg-black/20"
+  <div class="flex w-full py-4">
+    <footer
+      role="contentinfo"
+      class="flex container container-px w-full justify-between"
     >
-        <footer role="contentinfo" class="relative z-10 w-full transition-transform duration-500">
-            <div class="container grid-layout container-px py-8">
-                <div
-                    class="col-span-10 col-start-2 flex flex-col justify-between gap-8 lg:flex-row"
-                >
-                    <div class="flex flex-row items-center gap-4">
-                        <SiteBrand />
-                        <p class="flex flex-row gap-1 text-xs">
-                            <span>&copy;</span> <span>{{ date }}</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
+      <div class="flex items-center justify-start gap-2">
+        <div class="h-10">
+          <SiteBrand icon-classes="size-10" />
+        </div>
+        <p class="flex flex-row gap-1 text-xs items-center">
+          <span>&copy;</span> Been Coffee House Ltd <span>{{ date }}</span>
+        </p>
+      </div>
+      <div class="flex">
+        <ul class="flex flex-row gap-2 items-center justify-end">
+          <li v-for="link in socialLinks" :key="link.name">
+            <a
+              :href="link.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-navy-500 hover:text-tuscany-700 transition-colors duration-300"
+            >
+              <u-icon :name="link.icon" class="size-5"></u-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script lang="ts" setup>
 const date: ComputedRef<number> = computed(() => {
-    return new Date().getFullYear()
+  return new Date().getFullYear()
 })
+
+const socialLinks = [
+  {
+    name: "Linktree",
+    href: "https://linktr.ee/beencoffeeuk",
+    icon: "i-tabler-brand-linktree",
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/beencoffeeuk",
+    icon: "i-ri-facebook-fill",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/beencoffeeuk/",
+    icon: "i-ri-instagram-fill",
+  },
+]
 </script>

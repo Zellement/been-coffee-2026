@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Do you allow dogs?",
+    "content": "Yes, we welcome well-behaved owners with their dogs. Please be considerate of other customers and keep your dog on a lead at all times."
+  },
+  {
+    "label": "What is your laptop policy?",
+    "content": "We welcome customers to work on their laptops, but we ask that you are considerate of our small business, help us keep the lights on, and if the shop is busy, please consider moving to a quieter area or sharing a table with other customers."
+  },
+  {
+    "label": "Are you open on bank holidays, or other special days?",
+    "content": "Yes! We are open 364 days per year - we only close for Christmas Day. We are open on all bank holidays and special days, so you can always count on us for your coffee fix! Please check opening hours around Christmas and New Year, as we may have reduced hours during this time."
+  },
+  {
+    "label": "Do you do gift cards?",
+    "content": "We do. You can pick up a Been Coffee & Cake gift card - come in and ask one of our friendly staff."
+  },
+  {
+    "label": "Do you do loyalty cards?",
+    "content": "We offer both [digital](https://linktr.ee/beencoffeeuk) and physical loyalty cards. Ask one of our friendly staff for more information."
+  },
+  {
+    "label": "Do you have any job vacancies?",
+    "content": "Please watch our social media channels for any job vacancies - find the links at the bottom of this website."
+  }
+]

@@ -1,19 +1,21 @@
 <template>
-    <header
-        role="banner"
-        class="fixed top-0 right-0 left-0 z-50 w-full bg-white/80 py-4 transition-transform duration-500 backdrop-blur-sm"
-    >
-        <div class="container grid-layout container-px">
-            <div
-                class="relative col-span-full row-start-1 flex w-full items-center justify-between"
-            >
-                <SiteBrand />
-                <SiteNav />
-            </div>
-        </div>
-    </header>
+  <header
+    role="banner"
+    class="fixed top-0 right-0 left-0 z-50 w-full py-4 pointer-events-none transition-transform duration-500"
+  >
+    <div class="container container-px grid-layout">
+      <div
+        class="relative col-span-full row-start-1 flex items-center flex-col md:flex-row gap-2 justify-between"
+      >
+        <SiteBrand />
+        <SiteNav class="justify-center md:justify-end" />
+        <!-- <ButtonMenu /> -->
+      </div>
+    </div>
+  </header>
+  <!-- <div
+        class="fixed z-10 top-0 left-0 border-t-150 border-r-150 border-t-tuscany-500 border-r-transparent"
+    ></div> -->
 </template>
 
-<script setup lang="ts">
-const uiStore = useUiStore()
-</script>
+<script setup lang="ts"></script>
