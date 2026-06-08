@@ -1,5 +1,5 @@
 <template>
-  <div class="grid col-span-full grid-cols-2 overflow-clip sm:grid-cols-6">
+  <div class="grid grid-cols-2 overflow-clip sm:grid-cols-6">
     <div v-for="(item, index) in media" :key="index" :class="getMosaicClass(index)">
       <video
         v-if="item.endsWith('.mp4')"

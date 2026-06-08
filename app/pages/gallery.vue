@@ -1,8 +1,7 @@
 <template>
   <UPage>
     <HeroStandard title="Gallery" />
-
-    <div class="container container-px py-4 grid lg:grid-cols-12 lg:gap-10">
+    <div class="max-w-500">
       <ImageGallery />
     </div>
   </UPage>
