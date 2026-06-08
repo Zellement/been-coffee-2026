@@ -39,10 +39,10 @@
           />
         </h2>
         <ul class="flex flex-wrap gap-2 items-center justify-center w-full">
-          <u-badge icon="i-iconoir-vegan-circle" size="lg" color="tertiary">
+          <u-badge icon="i-iconoir-vegan-circle" variant="outline" size="lg" color="tertiary">
             Vegan friendly
           </u-badge>
-          <u-badge icon="i-healthicons-gluten-free" size="lg" color="tertiary">
+          <u-badge icon="i-healthicons-gluten-free" variant="outline" size="lg" color="tertiary">
             Low-gluten options
           </u-badge>
         </ul>

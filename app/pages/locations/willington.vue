@@ -62,7 +62,7 @@
         <FormTableBooking location="Willington" />
       </div>
 
-      <div id="bookTable" class="pt-12 lg:col-span-6">
+      <div id="faqs" class="pt-12 lg:col-span-6">
         <h2 class="flex flex-col">
           <DualLineText class="text-xl" :text="`Frequently Asked`" level="span" />
           <DualLineText
@@ -101,6 +101,29 @@
           </template>
         </UAccordion>
       </div>
+
+      <div id="team" class="pt-1 col-span-full">
+        <h2 class="flex flex-col">
+          <DualLineText class="text-xl" :text="`Meet the`" level="span" />
+          <DualLineText
+            class="mb-4 -mt-1 text-2xl text-tuscany-500"
+            :text="`Managers`"
+            level="span"
+          />
+        </h2>
+        <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <UCard v-for="(item, index) in team" :key="index" class="">
+            <template #header>
+              <NuxtImg width="500" height="650" :src="item.image" />
+            </template>
+            <div class="flex flex-col gap-2 items-start">
+              <h2 class="text-lg font-bold">{{ item.label }}</h2>
+              <UBadge color="tertiary" variant="outline" :label="item.labelSuffix" />
+              <p class="text-sm">{{ item.description }}</p>
+            </div>
+          </UCard>
+        </div>
+      </div>
     </div>
   </UPage>
 </template>
@@ -108,6 +131,7 @@
 <script setup lang="ts">
 import type { TimelineItem, AccordionItem } from '@nuxt/ui'
 import Faqs from '~/data/faqs.json'
+import TeamMembers from '~/data/team.json'
 
 const pageNav = [
   { name: 'Opening Hours', href: '#overview' },
@@ -115,6 +139,19 @@ const pageNav = [
   { name: 'Telephone', href: '#overview' },
   { name: 'Gallery', href: '#gallery' },
   { name: 'Book a Table', href: '#bookTable' },
+  { name: 'FAQs', href: '#faqs' },
+  { name: 'Team', href: '#team' },
+]
+
+const team = [
+  ...TeamMembers,
+  {
+    label: 'Nikki',
+    labelSuffix: 'Assistant Manager',
+    description:
+      'Our amazing Assistant Manager Nikki will go out of her way to make sure you feel welcome and have everything you need. She is an integral part of the team and is always happy to help with any questions or requests you may have.',
+    image: '/locations/willington/nikki.webp',
+  },
 ]
 
 const accordionItems: AccordionItem[] = [
