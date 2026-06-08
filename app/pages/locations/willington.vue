@@ -65,7 +65,9 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
               <div
                 v-for="subitem in (
-                  item as { events?: Array<{ title: string; time: string; content: string }> }
+                  item as {
+                    events?: Event[]
+                  }
                 ).events || []"
                 :key="subitem.title"
               >
@@ -74,11 +76,9 @@
                 <p class="text-sm">{{ subitem.content }}</p>
                 <p class="text-sm mt-2">
                   Contact:
-                  <a
-                    :href="(subitem as { contact: string }).contact"
-                    class="text-tuscany-500 underline"
-                    >{{ (subitem as { contactText: string }).contactText }}</a
-                  >
+                  <a :href="subitem.contact" class="text-tuscany-500 underline">{{
+                    subitem.contactText
+                  }}</a>
                 </p>
               </div>
             </div>
@@ -101,8 +101,13 @@ const pageNav = [
   { name: 'Book a Table', href: '#bookTable' },
 ]
 
-// content:
-//   '.',
+interface Event {
+  title: string
+  time: string
+  content: string
+  contact: string
+  contactText: string
+}
 const accordionItems: AccordionItem[] = [
   ...Faqs,
   {
@@ -124,7 +129,7 @@ const accordionItems: AccordionItem[] = [
         contact: 'mailto:writeherecontact@gmail.com',
         contactText: 'writeherecontact@gmail.com',
       },
-    ],
+    ] as Event[],
   },
 ]
 
