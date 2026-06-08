@@ -1,9 +1,9 @@
 <template>
-    <UApp>
-        <NuxtLayout>
-            <NuxtPage />
-        </NuxtLayout>
-    </UApp>
+  <UApp>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </UApp>
 </template>
 
 <script setup lang="ts">
@@ -14,7 +14,7 @@ const uiStore = useUiStore()
 -------------------------- */
 
 const isAnyModalActive: ComputedRef<boolean> = computed(() => {
-    return uiStore.showMobileNav
+  return uiStore.showMobileNav
 })
 
 /* --------------------------
@@ -22,12 +22,12 @@ const isAnyModalActive: ComputedRef<boolean> = computed(() => {
 -------------------------- */
 
 useHead({
-    // Prevent page scrolling when mobile nav is open
-    bodyAttrs: {
-        class: computed((): string => {
-            if (isAnyModalActive.value) return 'overflow-hidden'
-            return ''
-        })
-    }
+  // Prevent page scrolling when mobile nav is open
+  bodyAttrs: {
+    class: computed((): string => {
+      if (isAnyModalActive.value) return 'overflow-hidden'
+      return ''
+    }),
+  },
 })
 </script>

@@ -20,11 +20,7 @@
         >
           <img :src="award.logoUrl" alt="Award Logo" class="w-28 h-auto" />
           <div class="text-center text-sm font-krete">
-            <div
-              v-for="(yearGroup, yi) in award.details"
-              :key="yi"
-              class="mb-2"
-            >
+            <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
               <p class="font-bold">{{ yearGroup.year }}</p>
               <p v-for="(detail, di) in yearGroup.details" :key="di">
                 {{ detail.title }}
@@ -60,20 +56,20 @@ const awardColumns: AwardColumn[] = [
   {
     awards: [
       {
-        logoUrl: "/logos/luxlife.png",
+        logoUrl: '/logos/luxlife.png',
         details: [
           {
-            year: "2026",
+            year: '2026',
             details: [
-              { title: "Best Independent Coffee Shop 2026" },
-              { title: "Sustainability Excellence Award" },
+              { title: 'Best Independent Coffee Shop 2026' },
+              { title: 'Sustainability Excellence Award' },
             ],
           },
           {
-            year: "2025",
+            year: '2025',
             details: [
-              { title: "Derby Coffee Shop of the Year" },
-              { title: "Best Independent Coffee Shop Derbyshire" },
+              { title: 'Derby Coffee Shop of the Year' },
+              { title: 'Best Independent Coffee Shop Derbyshire' },
             ],
           },
         ],
@@ -83,23 +79,23 @@ const awardColumns: AwardColumn[] = [
   {
     awards: [
       {
-        logoUrl: "/logos/good-food.jpg",
+        logoUrl: '/logos/good-food.jpg',
         details: [
           {
-            year: "2025",
-            details: [{ title: "Good Food Award Gold Seal" }],
+            year: '2025',
+            details: [{ title: 'Good Food Award Gold Seal' }],
           },
           {
-            year: "2024",
-            details: [{ title: "Good Food Award Winner" }],
+            year: '2024',
+            details: [{ title: 'Good Food Award Winner' }],
           },
           {
-            year: "2023",
-            details: [{ title: "Good Food Award Winner" }],
+            year: '2023',
+            details: [{ title: 'Good Food Award Winner' }],
           },
           {
-            year: "2022",
-            details: [{ title: "Good Food Award Blue Ribbon" }],
+            year: '2022',
+            details: [{ title: 'Good Food Award Blue Ribbon' }],
           },
         ],
       },
@@ -108,20 +104,20 @@ const awardColumns: AwardColumn[] = [
   {
     awards: [
       {
-        logoUrl: "/logos/business-concept.png",
+        logoUrl: '/logos/business-concept.png',
         details: [
           {
-            year: "2024",
-            details: [{ title: "Best Independent Coffee Shop Derby" }],
+            year: '2024',
+            details: [{ title: 'Best Independent Coffee Shop Derby' }],
           },
         ],
       },
       {
-        logoUrl: "/logos/rg.png",
+        logoUrl: '/logos/rg.png',
         details: [
           {
-            year: "2023",
-            details: [{ title: "Best Cafe in Derby" }],
+            year: '2023',
+            details: [{ title: 'Best Cafe in Derby' }],
           },
         ],
       },

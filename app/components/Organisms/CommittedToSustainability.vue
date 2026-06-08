@@ -16,8 +16,8 @@
     </h2>
     <p class="text-center max-w-160 mx-auto text-lg font-krete">
       We choose brands and partners who share our
-      <span class="text-butterscotch-500">commitment to sustainability</span>,
-      and we're always looking for ways to reduce our environmental impact.
+      <span class="text-butterscotch-500">commitment to sustainability</span>, and we're always
+      looking for ways to reduce our environmental impact.
     </p>
     <UCarousel
       class="sm:mx-20"
@@ -46,28 +46,28 @@
 <script lang="ts" setup>
 const imagery: ImageryItem[] = [
   {
-    src: "/logos/decent.webp",
-    alt: "Decent Packaging logo",
+    src: '/logos/decent.webp',
+    alt: 'Decent Packaging logo',
   },
   {
-    src: "/logos/karma.webp",
-    alt: "Karma logo",
+    src: '/logos/karma.webp',
+    alt: 'Karma logo',
   },
   {
-    src: "/logos/kokoa.jpg",
-    alt: "Kokoa Collection logo",
+    src: '/logos/kokoa.jpg',
+    alt: 'Kokoa Collection logo',
   },
   {
-    src: "/logos/onewater.svg",
-    alt: "One Water logo",
+    src: '/logos/onewater.svg',
+    alt: 'One Water logo',
   },
   {
-    src: "/logos/peppersmith.png",
-    alt: "Peppersmith logo",
+    src: '/logos/peppersmith.png',
+    alt: 'Peppersmith logo',
   },
   {
-    src: "/logos/beebombs.png",
-    alt: "BeeBombs logo",
+    src: '/logos/beebombs.png',
+    alt: 'BeeBombs logo',
   },
 ]
 </script>

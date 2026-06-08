@@ -1,9 +1,6 @@
 <template>
   <div class="flex w-full py-4">
-    <footer
-      role="contentinfo"
-      class="flex container container-px w-full justify-between"
-    >
+    <footer role="contentinfo" class="flex container container-px w-full justify-between">
       <div class="flex items-center justify-start gap-2">
         <div class="h-10">
           <SiteBrand icon-classes="size-10" />
@@ -37,19 +34,19 @@ const date: ComputedRef<number> = computed(() => {
 
 const socialLinks = [
   {
-    name: "Linktree",
-    href: "https://linktr.ee/beencoffeeuk",
-    icon: "i-tabler-brand-linktree",
+    name: 'Linktree',
+    href: 'https://linktr.ee/beencoffeeuk',
+    icon: 'i-tabler-brand-linktree',
   },
   {
-    name: "Facebook",
-    href: "https://www.facebook.com/beencoffeeuk",
-    icon: "i-ri-facebook-fill",
+    name: 'Facebook',
+    href: 'https://www.facebook.com/beencoffeeuk',
+    icon: 'i-ri-facebook-fill',
   },
   {
-    name: "Instagram",
-    href: "https://www.instagram.com/beencoffeeuk/",
-    icon: "i-ri-instagram-fill",
+    name: 'Instagram',
+    href: 'https://www.instagram.com/beencoffeeuk/',
+    icon: 'i-ri-instagram-fill',
   },
 ]
 </script>

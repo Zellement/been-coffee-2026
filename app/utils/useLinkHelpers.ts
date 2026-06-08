@@ -4,7 +4,7 @@
  * @returns `true` if the path is an external link.
  */
 export const isExternalLink = (fullPath: string) => {
-    return /^(https?:)?\/\//.test(fullPath)
+  return /^(https?:)?\/\//.test(fullPath)
 }
 
 /**
@@ -13,10 +13,10 @@ export const isExternalLink = (fullPath: string) => {
  * @returns The path without a trailing slash.
  */
 export const trimTrailingSlash = (path: string) => {
-    if (path.endsWith('/') && path.length > 1) {
-        return path.slice(0, -1)
-    }
-    return path
+  if (path.endsWith('/') && path.length > 1) {
+    return path.slice(0, -1)
+  }
+  return path
 }
 
 /**

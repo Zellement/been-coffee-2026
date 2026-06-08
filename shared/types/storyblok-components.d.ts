@@ -2,42 +2,42 @@
 // DO NOT MODIFY THIS FILE BY HAND.
 import type { StoryblokMultilink, StoryblokAsset } from '../storyblok.d.ts'
 export interface StoryblokDataSiteOptions {
-    navigation?: StoryblokSbNavItem[]
-    component: 'dataSiteOptions'
-    _uid: string
-    [k: string]: unknown
+  navigation?: StoryblokSbNavItem[]
+  component: 'dataSiteOptions'
+  _uid: string
+  [k: string]: unknown
 }
 
 export interface StoryblokSbCardBlock {
-    cards?: StoryblokSbSingleCard[]
-    component: 'sbCardBlock'
-    _uid: string
-    [k: string]: unknown
+  cards?: StoryblokSbSingleCard[]
+  component: 'sbCardBlock'
+  _uid: string
+  [k: string]: unknown
 }
 
 export interface StoryblokSbNavItem {
-    title?: string
-    link?: Exclude<StoryblokMultilink, { linktype?: 'email' } | { linktype?: 'asset' }>
-    component: 'sbNavItem'
-    _uid: string
-    [k: string]: unknown
+  title?: string
+  link?: Exclude<StoryblokMultilink, { linktype?: 'email' } | { linktype?: 'asset' }>
+  component: 'sbNavItem'
+  _uid: string
+  [k: string]: unknown
 }
 
 export interface StoryblokSbSingleCard {
-    title?: string
-    component: 'sbSingleCard'
-    _uid: string
-    [k: string]: unknown
+  title?: string
+  component: 'sbSingleCard'
+  _uid: string
+  [k: string]: unknown
 }
 
 export interface StoryblokTemplatePage {
-    featuredMediaStatic?: StoryblokAsset
-    body?: StoryblokSbCardBlock[]
-    bodySpacing?: number | string
-    metaTags?: unknown
-    component: 'templatePage'
-    _uid: string
-    [k: string]: unknown
+  featuredMediaStatic?: StoryblokAsset
+  body?: StoryblokSbCardBlock[]
+  bodySpacing?: number | string
+  metaTags?: unknown
+  component: 'templatePage'
+  _uid: string
+  [k: string]: unknown
 }
 
 export type ContentType = StoryblokDataSiteOptions | StoryblokTemplatePage

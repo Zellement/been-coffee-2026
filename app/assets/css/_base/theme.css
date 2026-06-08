@@ -1,33 +1,33 @@
 :root {
-    --ui-success: var(--color-green-700);
-    --ui-warning: var(--color-amber-500);
-    --ui-tertiary: var(--color-tuscany-500);
-    --ui-info: var(--color-blue-800);
+  --ui-success: var(--color-green-700);
+  --ui-warning: var(--color-amber-500);
+  --ui-tertiary: var(--color-tuscany-500);
+  --ui-info: var(--color-blue-800);
 
-    /* Neutral */
-    --ui-text-dimmed: var(--ui-color-secondary-400);
-    --ui-text-muted: var(--ui-color-secondary-500);
-    --ui-text-toned: var(--ui-color-secondary-600);
-    --ui-text: var(--ui-color-secondary-900);
-    --ui-text-highlighted: var(--ui-color-secondary-900);
-    --ui-text-inverted: var(--color-white);
+  /* Neutral */
+  --ui-text-dimmed: var(--ui-color-secondary-400);
+  --ui-text-muted: var(--ui-color-secondary-500);
+  --ui-text-toned: var(--ui-color-secondary-600);
+  --ui-text: var(--ui-color-secondary-900);
+  --ui-text-highlighted: var(--ui-color-secondary-900);
+  --ui-text-inverted: var(--color-white);
 
-    --ui-bg: var(--color-white);
-    --ui-bg-muted: var(--ui-color-secondary-50);
-    --ui-bg-elevated: var(--ui-color-secondary-100);
-    --ui-bg-accented: var(--ui-color-secondary-200);
-    --ui-bg-inverted: var(--ui-color-primary-500);
+  --ui-bg: var(--color-white);
+  --ui-bg-muted: var(--ui-color-secondary-50);
+  --ui-bg-elevated: var(--ui-color-secondary-100);
+  --ui-bg-accented: var(--ui-color-secondary-200);
+  --ui-bg-inverted: var(--ui-color-primary-500);
 
-    --ui-border: var(--ui-color-secondary-200);
-    --ui-border-muted: var(--ui-color-secondary-200);
-    --ui-border-accented: var(--ui-color-secondary-300);
-    --ui-border-inverted: var(--ui-color-secondary-900);
+  --ui-border: var(--ui-color-secondary-200);
+  --ui-border-muted: var(--ui-color-secondary-200);
+  --ui-border-accented: var(--ui-color-secondary-300);
+  --ui-border-inverted: var(--ui-color-secondary-900);
 
-    /* Card */
-    --card-b-top: var(--color-seashell-300);
-    --card-b-left: var(--color-seashell-300);
-    --card-b-right: var(--color-seashell-800);
-    --card-b-bottom: var(--color-seashell-800);
+  /* Card */
+  --card-b-top: var(--color-seashell-300);
+  --card-b-left: var(--color-seashell-300);
+  --card-b-right: var(--color-seashell-800);
+  --card-b-bottom: var(--color-seashell-800);
 }
 /* 
 .dark {
@@ -56,207 +56,207 @@
 } */
 
 @theme static {
-    /* -------------------------
+  /* -------------------------
   Colours
   ------------------------- */
 
-    --color-black: #000;
-    --color-white: #fff;
+  --color-black: #000;
+  --color-white: #fff;
 
-    --color-green-50: #effdf5;
-    --color-green-100: #d9fbe8;
-    --color-green-200: #b3f5d1;
-    --color-green-300: #75edae;
-    --color-green-400: #00dc82;
-    --color-green-500: #00c16a;
-    --color-green-600: #00a155;
-    --color-green-700: #007f45;
-    --color-green-800: #016538;
-    --color-green-900: #0a5331;
-    --color-green-950: #052e16;
+  --color-green-50: #effdf5;
+  --color-green-100: #d9fbe8;
+  --color-green-200: #b3f5d1;
+  --color-green-300: #75edae;
+  --color-green-400: #00dc82;
+  --color-green-500: #00c16a;
+  --color-green-600: #00a155;
+  --color-green-700: #007f45;
+  --color-green-800: #016538;
+  --color-green-900: #0a5331;
+  --color-green-950: #052e16;
 
-    --color-butterscotch-50: #fffcf7;
-    --color-butterscotch-100: #fef4e3;
-    --color-butterscotch-200: #fde6bb;
-    --color-butterscotch-300: #fcd793;
-    --color-butterscotch-400: #fbc86c;
-    --color-butterscotch-500: #fab944;
-    --color-butterscotch-600: #f9a50d;
-    --color-butterscotch-700: #c88305;
-    --color-butterscotch-800: #925f04;
-    --color-butterscotch-900: #5b3b02;
-    --color-butterscotch-950: #2d1d01;
+  --color-butterscotch-50: #fffcf7;
+  --color-butterscotch-100: #fef4e3;
+  --color-butterscotch-200: #fde6bb;
+  --color-butterscotch-300: #fcd793;
+  --color-butterscotch-400: #fbc86c;
+  --color-butterscotch-500: #fab944;
+  --color-butterscotch-600: #f9a50d;
+  --color-butterscotch-700: #c88305;
+  --color-butterscotch-800: #925f04;
+  --color-butterscotch-900: #5b3b02;
+  --color-butterscotch-950: #2d1d01;
 
-    --color-tuscany-50: #f2d3c7;
-    --color-tuscany-100: #eec6b7;
-    --color-tuscany-200: #e7ab96;
-    --color-tuscany-300: #df9174;
-    --color-tuscany-400: #d87653;
-    --color-tuscany-500: #d05c32;
-    --color-tuscany-600: #a44726;
-    --color-tuscany-700: #77331b;
-    --color-tuscany-800: #492011;
-    --color-tuscany-900: #1b0c06;
-    --color-tuscany-950: #000000;
+  --color-tuscany-50: #f2d3c7;
+  --color-tuscany-100: #eec6b7;
+  --color-tuscany-200: #e7ab96;
+  --color-tuscany-300: #df9174;
+  --color-tuscany-400: #d87653;
+  --color-tuscany-500: #d05c32;
+  --color-tuscany-600: #a44726;
+  --color-tuscany-700: #77331b;
+  --color-tuscany-800: #492011;
+  --color-tuscany-900: #1b0c06;
+  --color-tuscany-950: #000000;
 
-    --color-purple-50: #faf5f9;
-    --color-purple-100: #f6edf5;
-    --color-purple-200: #eedceb;
-    --color-purple-300: #e0c1db;
-    --color-purple-400: #cc9ac2;
-    --color-purple-500: #ba7aac;
-    --color-purple-600: #a45e91;
-    --color-purple-700: #8b4b78;
-    --color-purple-800: #744064;
-    --color-purple-900: #623955;
-    --color-purple-950: #47243c;
+  --color-purple-50: #faf5f9;
+  --color-purple-100: #f6edf5;
+  --color-purple-200: #eedceb;
+  --color-purple-300: #e0c1db;
+  --color-purple-400: #cc9ac2;
+  --color-purple-500: #ba7aac;
+  --color-purple-600: #a45e91;
+  --color-purple-700: #8b4b78;
+  --color-purple-800: #744064;
+  --color-purple-900: #623955;
+  --color-purple-950: #47243c;
 
-    --color-navy-50: rgba(244 244 245);
-    --color-navy-100: rgba(232 232 236);
-    --color-navy-200: rgba(198 199 206);
-    --color-navy-300: rgba(164 165 177);
-    --color-navy-400: rgba(95 97 119);
-    --color-navy-500: rgba(27 29 60);
-    --color-navy-600: rgba(24 26 54);
-    --color-navy-700: rgba(16 17 36);
-    --color-navy-800: rgba(12 13 27);
-    --color-navy-900: rgba(8 9 18);
+  --color-navy-50: rgba(244 244 245);
+  --color-navy-100: rgba(232 232 236);
+  --color-navy-200: rgba(198 199 206);
+  --color-navy-300: rgba(164 165 177);
+  --color-navy-400: rgba(95 97 119);
+  --color-navy-500: rgba(27 29 60);
+  --color-navy-600: rgba(24 26 54);
+  --color-navy-700: rgba(16 17 36);
+  --color-navy-800: rgba(12 13 27);
+  --color-navy-900: rgba(8 9 18);
 
-    --color-seashell: oklch(97.251% 0.01983 69.999);
-    --color-seashell-50: oklch(100% 0 none);
-    --color-seashell-100: oklch(99.723% 0.00285 84.559);
-    --color-seashell-200: oklch(99.005% 0.00681 67.746);
-    --color-seashell-300: oklch(98.482% 0.01128 71.902);
-    --color-seashell-400: oklch(97.769% 0.01537 67.646);
-    --color-seashell-500: oklch(97.251% 0.01983 69.999);
-    --color-seashell-600: oklch(96.029% 0.02842 69.169);
-    --color-seashell-700: oklch(94.817% 0.03704 68.659);
-    --color-seashell-800: oklch(93.593% 0.04667 69.283);
-    --color-seashell-900: oklch(92.405% 0.05529 68.812);
-    --color-seashell-950: oklch(91.911% 0.05972 69.415);
+  --color-seashell: oklch(97.251% 0.01983 69.999);
+  --color-seashell-50: oklch(100% 0 none);
+  --color-seashell-100: oklch(99.723% 0.00285 84.559);
+  --color-seashell-200: oklch(99.005% 0.00681 67.746);
+  --color-seashell-300: oklch(98.482% 0.01128 71.902);
+  --color-seashell-400: oklch(97.769% 0.01537 67.646);
+  --color-seashell-500: oklch(97.251% 0.01983 69.999);
+  --color-seashell-600: oklch(96.029% 0.02842 69.169);
+  --color-seashell-700: oklch(94.817% 0.03704 68.659);
+  --color-seashell-800: oklch(93.593% 0.04667 69.283);
+  --color-seashell-900: oklch(92.405% 0.05529 68.812);
+  --color-seashell-950: oklch(91.911% 0.05972 69.415);
 
-    /* -------------------------
+  /* -------------------------
   Fonts
   ------------------------- */
-    --font-sans: 'Roboto', sans-serif;
-    --font-riverside: 'Riverside', sans-serif;
-    --font-riverside-outline: 'Riverside Outline', sans-serif;
-    --font-krete: 'Krete', serif;
+  --font-sans: 'Roboto', sans-serif;
+  --font-riverside: 'Riverside', sans-serif;
+  --font-riverside-outline: 'Riverside Outline', sans-serif;
+  --font-krete: 'Krete', serif;
 
-    /* -------------------------
+  /* -------------------------
   Font sizes
   ------------------------- */
-    /* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1330,14,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  /* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1330,14,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-    /* Reset sizes */
-    --text-*: initial;
+  /* Reset sizes */
+  --text-*: initial;
 
-    /* Step -3: 9.72px → 7.88px */
-    --text-2xs: clamp(0.4924rem, 0.6441rem + -0.1825vw, 0.6076rem);
-    --text-2xs--line-height: calc(100% + 10px);
+  /* Step -3: 9.72px → 7.88px */
+  --text-2xs: clamp(0.4924rem, 0.6441rem + -0.1825vw, 0.6076rem);
+  --text-2xs--line-height: calc(100% + 10px);
 
-    /* Step -2: 11.67px → 10.50px  */
-    --text-xs: clamp(0.6564rem, 0.7522rem + -0.1153vw, 0.7292rem);
-    --text-xs--line-height: calc(100% + 10px);
+  /* Step -2: 11.67px → 10.50px  */
+  --text-xs: clamp(0.6564rem, 0.7522rem + -0.1153vw, 0.7292rem);
+  --text-xs--line-height: calc(100% + 10px);
 
-    /* Step -1: 14px */
-    --text-sm: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-    --text-sm--line-height: calc(100% + 10px);
+  /* Step -1: 14px */
+  --text-sm: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  --text-sm--line-height: calc(100% + 10px);
 
-    /* Step 0: 16.80px → 18.66px */
-    --text-base: clamp(1.05rem, 1.0131rem + 0.1844vw, 1.1664rem);
-    --text-base--line-height: calc(100% + 10px);
+  /* Step 0: 16.80px → 18.66px */
+  --text-base: clamp(1.05rem, 1.0131rem + 0.1844vw, 1.1664rem);
+  --text-base--line-height: calc(100% + 10px);
 
-    /* Step 1: 20.16px → 24.88px */
-    --text-lg: clamp(1.26rem, 1.1666rem + 0.467vw, 1.5548rem);
-    --text-lg--line-height: calc(100% + 10px);
+  /* Step 1: 20.16px → 24.88px */
+  --text-lg: clamp(1.26rem, 1.1666rem + 0.467vw, 1.5548rem);
+  --text-lg--line-height: calc(100% + 10px);
 
-    /* Step 2: 24.19px → 33.16px */
-    --text-xl: clamp(1.512rem, 1.3344rem + 0.888vw, 2.0725rem);
-    --text-xl--line-height: calc(100% + 10px);
+  /* Step 2: 24.19px → 33.16px */
+  --text-xl: clamp(1.512rem, 1.3344rem + 0.888vw, 2.0725rem);
+  --text-xl--line-height: calc(100% + 10px);
 
-    /* Step 3: 29.03px → 44.20px */
-    --text-2xl: clamp(1.8144rem, 1.514rem + 1.5022vw, 2.7627rem);
-    --text-2xl--line-height: calc(100% + 10px);
+  /* Step 3: 29.03px → 44.20px */
+  --text-2xl: clamp(1.8144rem, 1.514rem + 1.5022vw, 2.7627rem);
+  --text-2xl--line-height: calc(100% + 10px);
 
-    /* Step 4: 34.84px → 58.92px */
-    --text-3xl: clamp(2.1773rem, 1.7003rem + 2.3847vw, 3.6826rem);
-    --text-3xl--line-height: calc(2.25 / 1.875);
+  /* Step 4: 34.84px → 58.92px */
+  --text-3xl: clamp(2.1773rem, 1.7003rem + 2.3847vw, 3.6826rem);
+  --text-3xl--line-height: calc(2.25 / 1.875);
 
-    /* Step 5: 41.81px → 78.58px */
-    --text-4xl: clamp(2.5176rem, 1.9003rem + 3.7878vw, 4.9113rem);
-    --text-4xl--line-height: calc(2.25 / 1.875);
+  /* Step 5: 41.81px → 78.58px */
+  --text-4xl: clamp(2.5176rem, 1.9003rem + 3.7878vw, 4.9113rem);
+  --text-4xl--line-height: calc(2.25 / 1.875);
 
-    /* Step 6: 50.17px → 131.09px */
-    --text-5xl: clamp(2.9734rem, 2.1003rem + 6.0428vw, 6.5449rem);
-    --text-5xl--line-height: calc(2.25 / 1.875);
+  /* Step 6: 50.17px → 131.09px */
+  --text-5xl: clamp(2.9734rem, 2.1003rem + 6.0428vw, 6.5449rem);
+  --text-5xl--line-height: calc(2.25 / 1.875);
 
-    /* -------------------------
+  /* -------------------------
   Aspect ratios
   ------------------------- */
 
-    --aspect-landscape: 383 / 235;
-    --aspect-2/3: 2 / 3;
+  --aspect-landscape: 383 / 235;
+  --aspect-2/3: 2 / 3;
 
-    /* -------------------------
+  /* -------------------------
   Breakpoints/screens
   ------------------------- */
-    --breakpoint-*: initial;
-    --breakpoint-3xs: 21rem; /* 336px */
-    --breakpoint-2xs: 25.625rem; /* 410px */
-    --breakpoint-xs: 30rem; /* 480px */
-    --breakpoint-sm: 35rem; /* 560px */
-    --breakpoint-md: 45.714rem; /* 658px */
-    --breakpoint-lg: 54.875rem; /* 878px */
-    --breakpoint-xl: 67.375rem; /* 1078px */
-    --breakpoint-2xl: 79.19rem; /* 1280px */
-    --breakpoint-3xl: 90rem; /* 1400px */
+  --breakpoint-*: initial;
+  --breakpoint-3xs: 21rem; /* 336px */
+  --breakpoint-2xs: 25.625rem; /* 410px */
+  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-sm: 35rem; /* 560px */
+  --breakpoint-md: 45.714rem; /* 658px */
+  --breakpoint-lg: 54.875rem; /* 878px */
+  --breakpoint-xl: 67.375rem; /* 1078px */
+  --breakpoint-2xl: 79.19rem; /* 1280px */
+  --breakpoint-3xl: 90rem; /* 1400px */
 
-    /* -------------------------
+  /* -------------------------
   Containers
   ------------------------- */
-    --container-*: initial;
-    --container-3xs: 21rem; /* 336px */
-    --container-2xs: 25.625rem; /* 410px */
-    --container-xs: 30rem; /* 480px */
-    --container-sm: 35rem; /* 560px */
-    --container-md: 45.714rem; /* 658px */
-    --container-lg: 54.875rem; /* 878px */
-    --container-xl: 67.375rem; /* 1078px */
-    --container-2xl: 79.19rem; /* 1280px */
-    --container-3xl: 90rem; /* 1400px */
+  --container-*: initial;
+  --container-3xs: 21rem; /* 336px */
+  --container-2xs: 25.625rem; /* 410px */
+  --container-xs: 30rem; /* 480px */
+  --container-sm: 35rem; /* 560px */
+  --container-md: 45.714rem; /* 658px */
+  --container-lg: 54.875rem; /* 878px */
+  --container-xl: 67.375rem; /* 1078px */
+  --container-2xl: 79.19rem; /* 1280px */
+  --container-3xl: 90rem; /* 1400px */
 
-    /* -------------------------
+  /* -------------------------
   Spacing
   ------------------------- */
-    --spacing-1/2: 50%;
-    --spacing-1/3: 33.3333%;
-    --spacing-1/4: 25%;
-    --spacing-2/4: 50%;
-    --spacing-3/4: 75%;
-    --spacing-1/5: 20%;
-    --spacing-2/5: 40%;
-    --spacing-3/5: 60%;
-    --spacing-4/5: 80%;
-    --spacing-1/6: 16.6667%;
-    --spacing-2/6: 33.3333%;
-    --spacing-3/6: 50%;
-    --spacing-4/6: 66.6667%;
-    --spacing-5/6: 83.3333%;
-    --spacing-1/12: 8.3333%;
-    --spacing-2/12: 16.6667%;
-    --spacing-3/12: 25%;
-    --spacing-4/12: 33.3333%;
-    --spacing-5/12: 41.6667%;
-    --spacing-6/12: 50%;
-    --spacing-7/12: 58.3333%;
-    --spacing-8/12: 66.6667%;
-    --spacing-9/12: 75%;
-    --spacing-10/12: 83.3333%;
-    --spacing-11/12: 91.6667%;
-    --spacing-full: 100%;
-    --spacing-25vh: 25vh;
-    --spacing-50vw: 50vw;
-    --spacing-50vh: 50vh;
-    --spacing-75vh: 75vh;
+  --spacing-1/2: 50%;
+  --spacing-1/3: 33.3333%;
+  --spacing-1/4: 25%;
+  --spacing-2/4: 50%;
+  --spacing-3/4: 75%;
+  --spacing-1/5: 20%;
+  --spacing-2/5: 40%;
+  --spacing-3/5: 60%;
+  --spacing-4/5: 80%;
+  --spacing-1/6: 16.6667%;
+  --spacing-2/6: 33.3333%;
+  --spacing-3/6: 50%;
+  --spacing-4/6: 66.6667%;
+  --spacing-5/6: 83.3333%;
+  --spacing-1/12: 8.3333%;
+  --spacing-2/12: 16.6667%;
+  --spacing-3/12: 25%;
+  --spacing-4/12: 33.3333%;
+  --spacing-5/12: 41.6667%;
+  --spacing-6/12: 50%;
+  --spacing-7/12: 58.3333%;
+  --spacing-8/12: 66.6667%;
+  --spacing-9/12: 75%;
+  --spacing-10/12: 83.3333%;
+  --spacing-11/12: 91.6667%;
+  --spacing-full: 100%;
+  --spacing-25vh: 25vh;
+  --spacing-50vw: 50vw;
+  --spacing-50vh: 50vh;
+  --spacing-75vh: 75vh;
 }

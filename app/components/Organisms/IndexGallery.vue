@@ -16,15 +16,11 @@
     </h2>
     <p class="max-w-160 mx-auto font-krete text-lg">
       We offer a variety of both food and drink options, including
-      <span class="text-butterscotch-500"
-        >thick cut butcher bacon & Philadelphia bagels</span
-      >,
-      <span class="text-butterscotch-500"
-        >award-winning sausage cobs and bacon cobs</span
-      >, <span class="text-butterscotch-500">paninis</span>,
+      <span class="text-butterscotch-500">thick cut butcher bacon & Philadelphia bagels</span>,
+      <span class="text-butterscotch-500">award-winning sausage cobs and bacon cobs</span>,
+      <span class="text-butterscotch-500">paninis</span>,
       <span class="text-butterscotch-500">handmade sausage rolls</span> and
-      <span class="text-butterscotch-500">traditional scotch eggs</span>, and
-      much, much more.
+      <span class="text-butterscotch-500">traditional scotch eggs</span>, and much, much more.
     </p>
     <UCarousel
       class="mt-20 mx-20"
@@ -43,41 +39,39 @@
         class="object-cover h-full w-full rounded-lg overflow-hidden"
       />
     </UCarousel>
-    <UButton class="mt-20" color="secondary" to="/gallery">
-      View More Photos
-    </UButton>
+    <UButton class="mt-20" color="secondary" to="/gallery"> View More Photos </UButton>
   </div>
 </template>
 
 <script lang="ts" setup>
 const imagery: ImageryItem[] = [
   {
-    src: "/index-gallery/1.jpg",
-    alt: "Salmon bagel",
+    src: '/index-gallery/1.jpg',
+    alt: 'Salmon bagel',
   },
   {
-    src: "/index-gallery/2.jpg",
-    alt: "Mozzarella panini",
+    src: '/index-gallery/2.jpg',
+    alt: 'Mozzarella panini',
   },
   {
-    src: "/index-gallery/3.jpg",
-    alt: "Mozzarella panini with pesto",
+    src: '/index-gallery/3.jpg',
+    alt: 'Mozzarella panini with pesto',
   },
   {
-    src: "/index-gallery/4.jpg",
-    alt: "Pizza bagel with pepperoni",
+    src: '/index-gallery/4.jpg',
+    alt: 'Pizza bagel with pepperoni',
   },
   {
-    src: "/index-gallery/5.jpg",
-    alt: "Bacon and Philly bagel",
+    src: '/index-gallery/5.jpg',
+    alt: 'Bacon and Philly bagel',
   },
   {
-    src: "/index-gallery/6.jpg",
-    alt: "The Monster",
+    src: '/index-gallery/6.jpg',
+    alt: 'The Monster',
   },
   {
-    src: "/index-gallery/7.jpg",
-    alt: "Margherita pizza bagel",
+    src: '/index-gallery/7.jpg',
+    alt: 'Margherita pizza bagel',
   },
 ]
 </script>
