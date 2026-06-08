@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-linear-to-br from-navy-400 pt-50 flex items-end pb-10 via-navy-500 to-navy-700"
+    class="bg-linear-to-br from-navy-400 pt-50 lg:pt-30 flex items-end pb-10 via-navy-500 to-navy-700"
   >
     <div class="container container-px text-center md:text-left relative">
       <DualLineText

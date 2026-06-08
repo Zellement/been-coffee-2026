@@ -12,12 +12,20 @@ declare global {
     alt: string
   }
 
+  interface Event {
+    title: string
+    time: string
+    content: string
+    contact: string
+    contactText: string
+  }
+
   type AcceptedSpacings =
-    | "spacing-none"
-    | "spacing-8rem"
-    | "spacing-20rem"
-    | "spacing-30rem"
-    | "spacing-40rem"
+    | 'spacing-none'
+    | 'spacing-8rem'
+    | 'spacing-20rem'
+    | 'spacing-30rem'
+    | 'spacing-40rem'
 
   type TemplatePageTypesStoryblok =
     | TemplateHomepageStoryblok

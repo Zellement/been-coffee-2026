@@ -104,13 +104,6 @@ const pageNav = [
   { name: 'Book a Table', href: '#bookTable' },
 ]
 
-interface Event {
-  title: string
-  time: string
-  content: string
-  contact: string
-  contactText: string
-}
 const accordionItems: AccordionItem[] = [
   ...Faqs,
   {
@@ -133,6 +126,11 @@ const accordionItems: AccordionItem[] = [
         contactText: 'writeherecontact@gmail.com',
       },
     ] as Event[],
+  },
+  {
+    label: 'Do you have highchairs and baby changing facilities?',
+    content:
+      "We have two highchairs available for use and a fold-away baby changing station in the accessible toilet. Please be advised these are used at the customer's own risk.",
   },
 ]
 
