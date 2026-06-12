@@ -10,7 +10,7 @@
         autoplay
         class="h-full w-full object-cover"
       >
-        <source :src="item" type="video/mp4">
+        <source :src="item" type="video/mp4" />
       </video>
       <NuxtImg
         v-else
@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 const media = ref(
-  Array.from({ length: 22 }, (_, i) => {
+  Array.from({ length: 34 }, (_, i) => {
     switch (i) {
       case 1:
         return '/gallery/gallery2.mp4'

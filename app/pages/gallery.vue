@@ -1,9 +1,7 @@
 <template>
   <UPage>
     <HeroStandard title="Gallery" />
-    <div class="max-w-500">
-      <ImageGallery />
-    </div>
+    <ImageGallery />
   </UPage>
 </template>
 
