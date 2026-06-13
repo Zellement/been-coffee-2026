@@ -151,7 +151,7 @@ const imagery: ImageryItem[] = [
 
 const title = 'Been Coffee Long Eaton - Coffee shop in Long Eaton, Nottingham'
 const description =
-  "Been Coffee's second location, boasting great coffee, delicious food and a warm welcome in the heart of Long Eaton, Nottinghamshire."
+  "Been Coffee's second location, boasting great coffee, delicious food and a warm welcome near West Park, Long Eaton, Nottinghamshire."
 
 defineOgImage('DefaultOgImage', {
   title: 'Been Coffee Long Eaton',
