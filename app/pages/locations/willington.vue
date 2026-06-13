@@ -133,6 +133,8 @@ import type { TimelineItem, AccordionItem } from '@nuxt/ui'
 import Faqs from '~/data/faqs.json'
 import TeamMembers from '~/data/team.json'
 
+const { origin } = useRequestURL()
+
 const pageNav = [
   { name: 'Opening Hours', href: '#overview' },
   { name: 'Address', href: '#overview' },
@@ -230,13 +232,26 @@ const imagery: ImageryItem[] = [
   },
 ]
 
+const title = 'Been Coffee Willington - Award-winning coffee shop in Willington, Derby'
+const description =
+  'Been Coffee is an award-winning coffee shop located in Willington, Derby. We serve high-quality coffee and delicious food in a cosy and welcoming atmosphere.'
+
+defineOgImage('DefaultOgImage', {
+  title: 'Been Coffee Willington',
+  description,
+  imageUrl: `${origin}/locations/willington/01.jpg`,
+})
+
 useHead({
-  title: 'Been Coffee Willington - Award-winning coffee shop in Willington, Derby',
+  title,
   meta: [
     {
       name: 'description',
-      content:
-        'Been Coffee is an award-winning coffee shop located in Willington, Derby. We serve high-quality coffee and delicious food in a cozy and welcoming atmosphere. ',
+      content: description,
+    },
+    {
+      property: 'og:image',
+      content: `${origin}/locations/willington/01.jpg`,
     },
   ],
 })
