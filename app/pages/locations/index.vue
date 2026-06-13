@@ -4,7 +4,7 @@
     <section class="grid md:grid-cols-2 gap-4 container container-px py-4">
       <UCard v-for="(location, index) in childrenNav" :key="index" class="">
         <template #header>
-          <NuxtImg width="500" height="300" :src="location.image" />
+          <NuxtImg width="500" height="300" fit="cover" class="w-full" :src="location.image" />
         </template>
         <div class="flex flex-col gap-2 items-start">
           <h2 class="text-2xl font-bold">{{ location.label }}</h2>
