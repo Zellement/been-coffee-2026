@@ -94,6 +94,8 @@
 import type { TimelineItem, AccordionItem } from '@nuxt/ui'
 import Faqs from '~/data/faqs.json'
 
+const { origin } = useRequestURL()
+
 const pageNav = [
   { name: 'Opening Hours', href: '#overview' },
   { name: 'Address', href: '#overview' },
@@ -147,13 +149,26 @@ const imagery: ImageryItem[] = [
   },
 ]
 
+const title = 'Been Coffee Long Eaton - Coffee shop in Long Eaton, Nottingham'
+const description =
+  "Been Coffee's second location, boasting great coffee, delicious food and a warm welcome in the heart of Long Eaton, Nottinghamshire."
+
+defineOgImage('DefaultOgImage', {
+  title: 'Been Coffee Long Eaton',
+  description,
+  imageUrl: `${origin}/locations/long-eaton/01.jpg`,
+})
+
 useHead({
-  title: 'Been Coffee Long Eaton - Coffee shop in Long Eaton, Nottingham',
+  title,
   meta: [
     {
       name: 'description',
-      content:
-        "Been Coffee's second location, boasting great coffee, delicious food and a warm welcome in the heart of Long Eaton, Nottinghamshire.",
+      content: description,
+    },
+    {
+      property: 'og:image',
+      content: `${origin}/locations/long-eaton/01.jpg`,
     },
   ],
 })
