@@ -81,7 +81,7 @@ export default defineNuxtConfig({
 
   image: {
     densities: [1, 2],
-    provider: import.meta.env.NETLIFY ? 'netlify' : 'ipx',
+    provider: process.env.NODE_ENV === 'production' ? 'netlify' : 'ipx',
   },
 
   css: ['~/assets/css/app.css'],
