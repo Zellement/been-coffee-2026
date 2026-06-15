@@ -23,39 +23,7 @@
     </section>
 
     <section class="from-seashell-50 to-seashell-600">
-      <div class="container px-8 text-navy-500 flex gap-12 flex-col py-20">
-        <h2 class="flex flex-col">
-          <DualLineText
-            text="Vegan and"
-            level="span"
-            class="text-3xl mx-auto"
-            outline-class="text-butterscotch-500"
-          />
-          <DualLineText
-            text="Low-Gluten Options."
-            level="span"
-            class="text-3xl mx-auto"
-            outline-class="text-butterscotch-500"
-          />
-        </h2>
-        <ul class="flex flex-wrap gap-2 items-center justify-center w-full">
-          <u-badge icon="i-iconoir-vegan-circle" variant="outline" size="lg" color="tertiary">
-            Vegan friendly
-          </u-badge>
-          <u-badge icon="i-healthicons-gluten-free" variant="outline" size="lg" color="tertiary">
-            Low-gluten options
-          </u-badge>
-        </ul>
-        <p class="text-center max-w-160 mx-auto text-lg font-krete">
-          We've spent countless hours searching for excellent
-          <span class="text-tuscany-500">vegan</span> and
-          <span class="text-tuscany-500">low-gluten</span> options so that you don't have to.
-        </p>
-        <p class="text-center max-w-160 mx-auto text-lg font-krete">
-          We offer low-gluten bagel alternatives, paninis and and many of our cakes are either vegan
-          and/or low-gluten.
-        </p>
-      </div>
+      <VeganLowGluten />
     </section>
 
     <section class="bg-linear-to-br from-tuscany-500 to-tuscany-600">
