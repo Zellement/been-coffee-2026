@@ -1,14 +1,15 @@
 <template>
-  <UNavigationMenu :items="items" color="neutral" class="w-full max-w-160 pointer-events-auto">
+  <UNavigationMenu :items="items" color="neutral" class="pointer-events-auto w-full max-w-160">
     <template #locations-content="{ item }: { item: NavigationMenuItem }">
-      <ul class="grid gap-2 w-full p-4 lg:grid-cols-2">
-        <li v-for="child in item.children" class="w-full p-0" :key="child.label">
+      <ul class="grid w-full gap-2 p-4 lg:grid-cols-2">
+        <li v-for="child in item.children" :key="child.label" class="w-full p-0">
           <ULink
-            class="text-sm text-left rounded-md p-3 py-0! flex flex-col transition-colors hover:bg-elevated/50"
+            class="hover:bg-elevated/50 flex flex-col rounded-md p-3 py-0! text-left text-sm transition-colors"
             :to="child.to"
           >
-            <p class="font-medium text-highlighted">
+            <p class="text-highlighted font-medium">
               {{ child.label }}
+              <span :class="child.postcode" class="mr-1 text-xs">({{ child.postcode }})</span>
               <span :class="child.labelSuffixClass">{{ child.labelSuffix }}</span>
             </p>
             <p class="text-muted line-clamp-2">

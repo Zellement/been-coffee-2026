@@ -1,16 +1,25 @@
 <template>
   <section
-    class="bg-linear-to-br from-tuscany-400 pt-50 lg:pt-30 flex flex-col items-end pb-10 via-tuscany-500 to-tuscany-600"
+    class="from-tuscany-400 via-tuscany-500 to-tuscany-600 flex flex-col items-end bg-linear-to-br pt-50 pb-10 lg:pt-30"
   >
-    <div class="container gap-4 container-px text-center md:text-left relative">
+    <h1
+      class="container-px relative container flex flex-col justify-start text-center md:text-left"
+    >
       <DualLineText
-        :text="title"
-        level="h1"
-        class="text-3xl mx-auto text-white whitespace-normal"
+        v-if="titleBrow"
+        :text="titleBrow"
+        level="span"
+        class="-mb-2 text-xl whitespace-normal text-white"
         outline-class="text-butterscotch-500"
       />
-    </div>
-    <div class="container container-px mt-4 text-center md:text-left relative">
+      <DualLineText
+        :text="title"
+        level="span"
+        class="text-3xl whitespace-normal text-white"
+        outline-class="text-butterscotch-500"
+      />
+    </h1>
+    <div class="container-px relative container mt-4 text-center md:text-left">
       <slot />
     </div>
   </section>
@@ -18,6 +27,7 @@
 
 <script lang="ts" setup>
 interface Props {
+  titleBrow?: string
   title: string
 }
 

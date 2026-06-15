@@ -1,19 +1,19 @@
 <template>
   <UPage>
-    <HeroStandard title="Willington">
+    <HeroStandard title-brow="Been Coffee" title="Willington">
       <UModal fullscreen title="Order for collection">
         <UButtonDefault color="secondary" target="_blank">Order for collection </UButtonDefault>
 
         <template #body>
           <iframe
             src="https://goodeats.io/beencoffee?embed_outlet=beencoffee"
-            class="w-full h-full"
+            class="h-full w-full"
           />
         </template>
       </UModal>
     </HeroStandard>
     <div class="container w-full lg:hidden">
-      <div class="overflow-x-auto flex gap-2 p-2 pb-3">
+      <div class="flex gap-2 overflow-x-auto p-2 pb-3">
         <UButton
           v-for="item in pageNav"
           :key="item.name"
@@ -25,14 +25,14 @@
         >
       </div>
     </div>
-    <div id="overview" class="container container-px py-4 grid lg:grid-cols-12 lg:gap-10">
+    <div id="overview" class="container-px container grid py-4 lg:grid-cols-12 lg:gap-10">
       <UTimeline :default-value="2" :items="data" class="w-full lg:col-span-4">
         <template #title="{ item }">
           <p v-html="item.title" />
         </template>
       </UTimeline>
 
-      <div id="gallery" class="lg:col-span-8 mx-0 lg:mx-10 flex flex-col">
+      <div id="gallery" class="mx-0 flex flex-col lg:col-span-8 lg:mx-10">
         <UCarousel
           v-slot="{ item }"
           :ui="{
@@ -44,14 +44,14 @@
           :items="imagery"
         >
           <div
-            class="bg-white flex items-center justify-center h-full w-full rounded-lg overflow-hidden"
+            class="flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-white"
           >
             <NuxtImg
               :src="item.src"
               :alt="item.alt"
               width="500"
               height="300"
-              class="object-contain h-full w-full rounded-lg overflow-hidden"
+              class="h-full w-full overflow-hidden rounded-lg object-contain"
             />
           </div>
         </UCarousel>
@@ -68,7 +68,7 @@
         <h2 class="flex flex-col">
           <DualLineText class="text-xl" :text="`Frequently Asked`" level="span" />
           <DualLineText
-            class="mb-4 -mt-1 text-2xl text-tuscany-500"
+            class="text-tuscany-500 -mt-1 mb-4 text-2xl"
             :text="`Questions`"
             level="span"
           />
@@ -79,7 +79,7 @@
           </template>
           <template #grid="{ item }">
             <div class="@container">
-              <div class="grid grid-cols-1 @sm:grid-cols-2 gap-2">
+              <div class="grid grid-cols-1 gap-2 @sm:grid-cols-2">
                 <div
                   v-for="subitem in (
                     item as {
@@ -88,10 +88,10 @@
                   ).events || []"
                   :key="subitem.title"
                 >
-                  <p class="font-medium text-tuscany-500">{{ subitem.title }}</p>
-                  <p class="text-sm italic mb-2">{{ subitem.time }}</p>
+                  <p class="text-tuscany-500 font-medium">{{ subitem.title }}</p>
+                  <p class="mb-2 text-sm italic">{{ subitem.time }}</p>
                   <p class="text-sm">{{ subitem.content }}</p>
-                  <p class="text-sm mt-2">
+                  <p class="mt-2 text-sm">
                     Contact:
                     <a :href="subitem.contact" class="text-tuscany-500 underline">{{
                       subitem.contactText
@@ -104,21 +104,21 @@
         </UAccordion>
       </div>
 
-      <div id="team" class="pt-1 col-span-full lg:col-span-6 @container">
+      <div id="team" class="@container col-span-full pt-1 lg:col-span-6">
         <h2 class="flex flex-col">
           <DualLineText class="text-xl" :text="`Meet the`" level="span" />
           <DualLineText
-            class="mb-4 -mt-1 text-2xl text-tuscany-500"
+            class="text-tuscany-500 -mt-1 mb-4 text-2xl"
             :text="`Managers`"
             level="span"
           />
         </h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <UCard v-for="(item, index) in team" :key="index" class="">
             <template #header>
               <NuxtImg width="500" height="650" :src="item.image" />
             </template>
-            <div class="flex flex-col gap-2 items-start">
+            <div class="flex flex-col items-start gap-2">
               <h2 class="text-lg font-bold">{{ item.label }}</h2>
               <UBadge color="tertiary" variant="outline" :label="item.labelSuffix" />
               <p class="text-sm">{{ item.description }}</p>
