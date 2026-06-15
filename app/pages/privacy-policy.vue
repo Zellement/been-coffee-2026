@@ -52,8 +52,7 @@
         <h2>Contact Us</h2>
         <p>
           If you have any questions or concerns about this Privacy Policy or how we handle your
-          personal information, please contact us at
-          <a href="mailto:hello@been.coffee">hello@been.coffee</a>.
+          personal information, please <ULink to="/contact">contact us</ULink>.
         </p>
       </div>
     </div>

@@ -2,12 +2,10 @@
   <UPage>
     <HeroStandard title="Contact" />
     <div class="container container-px py-12">
-      <div class="prose">
-        <p>
-          If you would like to get in touch with us, please feel free to reach out via email at
-          <a href="mailto:hello@been.coffee">hello@been.coffee</a>.
-        </p>
+      <div class="prose mb-8">
+        <p>If you would like to get in touch with us, please fill in the form below and we'll get back to you as soon as possible.</p>
       </div>
+      <FormContact />
     </div>
   </UPage>
 </template>

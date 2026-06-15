@@ -2,14 +2,14 @@
   <UPage>
     <HeroStandard title="Media & Press" />
     <div class="container container-px py-12">
-      <div class="prose">
+      <div class="prose mb-8">
         <p>
           For media inquiries, press releases, or to request high-resolution images/logos and
-          interviews, please contact us via email at
-          <a href="mailto:hello@been.coffee">hello@been.coffee</a>. We are happy to provide
-          information about our company, products, and initiatives to journalists and media outlets.
+          interviews, please use the form below. We are happy to provide information about our
+          company, products, and initiatives to journalists and media outlets.
         </p>
       </div>
+      <FormContact />
     </div>
   </UPage>
 </template>
