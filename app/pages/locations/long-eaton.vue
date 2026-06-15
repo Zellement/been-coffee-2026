@@ -88,6 +88,9 @@
           </template>
         </UAccordion>
       </div>
+      <div id="directions" class="pt-12 col-span-full">
+        <LocationGetDirections postcode="NG10 3RJ" label="Been Coffee Long Eaton" />
+      </div>
     </div>
   </UPage>
 </template>
@@ -104,6 +107,7 @@ const pageNav = [
   { name: 'Telephone', href: '#overview' },
   { name: 'Gallery', href: '#gallery' },
   { name: 'Book a Table', href: '#bookTable' },
+  { name: 'Directions', href: '#directions' },
 ]
 
 const accordionItems: AccordionItem[] = [

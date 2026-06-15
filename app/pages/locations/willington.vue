@@ -104,7 +104,7 @@
         </UAccordion>
       </div>
 
-      <div id="team" class="pt-1 col-span-full">
+      <div id="team" class="pt-1 col-span-full lg:col-span-6 @container">
         <h2 class="flex flex-col">
           <DualLineText class="text-xl" :text="`Meet the`" level="span" />
           <DualLineText
@@ -113,7 +113,7 @@
             level="span"
           />
         </h2>
-        <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <UCard v-for="(item, index) in team" :key="index" class="">
             <template #header>
               <NuxtImg width="500" height="650" :src="item.image" />
@@ -125,6 +125,10 @@
             </div>
           </UCard>
         </div>
+      </div>
+
+      <div id="directions" class="col-span-full lg:col-span-6">
+        <LocationGetDirections postcode="DE65 6DX" label="Been Coffee Willington" />
       </div>
     </div>
   </UPage>
