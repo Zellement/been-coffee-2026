@@ -31,10 +31,11 @@
         </p>
 
         <p>
-          As an independent business, we know we can't change the world overnight, but we're
-          committed to making better choices every day. Whether that's reducing non-recyclable
-          waste, improving our packaging, or partnering with like-minded suppliers, we're always
-          looking for ways to create a greener future for our community and the planet.
+          Many of these choices cost more than the alternatives, particularly for a small
+          independent business. However, we've never wanted to take the cheapest route simply
+          because it's cheaper. We believe that investing in better packaging, responsible sourcing
+          and greener practices is worth it, and will continue to be a key part of how we operate as
+          we grow.
         </p>
       </div>
     </div>
