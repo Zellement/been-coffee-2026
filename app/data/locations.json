@@ -4,15 +4,15 @@
     "labelSuffix": "Coming Soon ",
     "labelSuffixClass": "text-xs rounded bg-navy-500 text-butterscotch-500 py-0.5 px-1 uppercase tracking-wide",
     "description": "Cosy and welcoming, conveniently placed near West Park and the train station.",
-    "to": "/locations/long-eaton",
-    "image": "/locations/long-eaton/01.jpg"
+    "to": "/media/locations/long-eaton",
+    "image": "/media/locations/long-eaton/01.jpg"
   },
   {
     "label": "Willington (DE65 6DX)",
     "labelSuffix": "Since 2021",
     "labelSuffixClass": "text-xs text-muted uppercase tracking-wide",
     "description": "A large car park, great for commuters, business meets and groups of friends.",
-    "to": "/locations/willington",
-    "image": "/locations/willington/01.jpg"
+    "to": "/media/locations/willington",
+    "image": "/media/locations/willington/01.jpg"
   }
 ]

@@ -29,13 +29,13 @@ const media = ref(
   Array.from({ length: 34 }, (_, i) => {
     switch (i) {
       case 1:
-        return '/gallery/gallery2.mp4'
+        return '/media/gallery/gallery2.mp4'
       case 10:
-        return '/gallery/gallery11.mp4'
+        return '/media/gallery/gallery11.mp4'
       case 18:
-        return '/gallery/gallery19.mp4'
+        return '/media/gallery/gallery19.mp4'
       default:
-        return `/gallery/gallery${i + 1}.jpg`
+        return `/media/gallery/gallery${i + 1}.jpg`
     }
   })
 )

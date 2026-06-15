@@ -1,20 +1,20 @@
 <template>
   <section role="banner" class="w-full h-[105dvh] relative block-clip--left">
     <video
-      src="/hero-mob.mp4"
+      src="/media/home/hero/hero-mob.mp4"
       autoplay
       loop
       muted
       class="w-full xl:hidden fixed inset-0 h-full object-cover"
-      poster="/heroposter.jpg"
+      poster="/media/home/hero/hero-poster.jpg"
     />
     <video
-      src="/hero.mp4"
+      src="/media/home/hero/hero.mp4"
       autoplay
       loop
       muted
       class="w-full hidden xl:block fixed inset-0 h-full object-cover"
-      poster="/heroposter.jpg"
+      poster="/media/home/hero/hero-poster.jpg"
     />
     <div
       class="absolute inset-0 flex flex-col items-start justify-end p-4 bg-opacity-50 text-white pb-[calc(5dvh+2rem)]"

@@ -158,7 +158,7 @@ const team = [
     labelSuffix: 'Assistant Manager',
     description:
       'Our amazing Assistant Manager Nikki will go out of her way to make sure you feel welcome and have everything you need. She is an integral part of the team and is always happy to help with any questions or requests you may have.',
-    image: '/locations/willington/nikki.webp',
+    image: '/media/locations/willington/nikki.webp',
   },
 ]
 
@@ -217,23 +217,23 @@ const data: TimelineItem[] = [
 
 const imagery: ImageryItem[] = [
   {
-    src: '/locations/willington/01.jpg',
+    src: '/media/locations/willington/01.jpg',
     alt: 'Outside Willington shop',
   },
   {
-    src: '/locations/willington/02.jpg',
+    src: '/media/locations/willington/02.jpg',
     alt: 'Outside Willington shop',
   },
   {
-    src: '/locations/willington/03.jpg',
+    src: '/media/locations/willington/03.jpg',
     alt: 'Inside Willington shop',
   },
   {
-    src: '/locations/willington/04.jpg',
+    src: '/media/locations/willington/04.jpg',
     alt: 'Inside Willington shop',
   },
   {
-    src: '/locations/willington/05.jpg',
+    src: '/media/locations/willington/05.jpg',
     alt: 'Inside Willington shop',
   },
 ]
@@ -245,7 +245,7 @@ const description =
 defineOgImage('DefaultOgImage', {
   title: 'Been Coffee Willington',
   description,
-  imageUrl: `${origin}/locations/willington/01.jpg`,
+  imageUrl: `${origin}/media/locations/willington/01.jpg`,
 })
 
 useHead({
@@ -257,7 +257,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `${origin}/locations/willington/01.jpg`,
+      content: `${origin}/media/locations/willington/01.jpg`,
     },
   ],
 })

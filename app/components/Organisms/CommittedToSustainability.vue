@@ -66,27 +66,27 @@
 <script lang="ts" setup>
 const imagery: ImageryItem[] = [
   {
-    src: '/logos/decent.webp',
+    src: '/media/logos/decent.webp',
     alt: 'Decent Packaging logo',
   },
   {
-    src: '/logos/karma.webp',
+    src: '/media/logos/karma.webp',
     alt: 'Karma logo',
   },
   {
-    src: '/logos/kokoa.jpg',
+    src: '/media/logos/kokoa.jpg',
     alt: 'Kokoa Collection logo',
   },
   {
-    src: '/logos/onewater.svg',
+    src: '/media/logos/onewater.svg',
     alt: 'One Water logo',
   },
   {
-    src: '/logos/peppersmith.png',
+    src: '/media/logos/peppersmith.png',
     alt: 'Peppersmith logo',
   },
   {
-    src: '/logos/beebombs.png',
+    src: '/media/logos/beebombs.png',
     alt: 'BeeBombs logo',
   },
 ]

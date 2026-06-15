@@ -2,7 +2,7 @@
   <div class="grid grid-cols-1 xl:grid-cols-2">
     <div class="col-span-1 col-start-1 flex h-full max-h-75 xl:row-start-1 xl:max-h-200">
       <NuxtImg
-        src="awards.jpeg"
+        src="/media/home/awards.jpeg"
         alt="Award Winning Coffee"
         class="block h-full w-full overflow-hidden object-cover"
         width="1000"
@@ -81,7 +81,7 @@ const awardColumns: AwardColumn[] = [
   {
     awards: [
       {
-        logoUrl: '/logos/luxlife.png',
+        logoUrl: '/media/logos/luxlife.png',
         details: [
           {
             year: '2026',
@@ -104,7 +104,7 @@ const awardColumns: AwardColumn[] = [
   {
     awards: [
       {
-        logoUrl: '/logos/good-food.jpg',
+        logoUrl: '/media/logos/good-food.jpg',
         details: [
           {
             year: '2025',
@@ -129,7 +129,7 @@ const awardColumns: AwardColumn[] = [
   {
     awards: [
       {
-        logoUrl: '/logos/business-concept.png',
+        logoUrl: '/media/logos/business-concept.png',
         details: [
           {
             year: '2024',
@@ -138,7 +138,7 @@ const awardColumns: AwardColumn[] = [
         ],
       },
       {
-        logoUrl: '/logos/rg.png',
+        logoUrl: '/media/logos/rg.png',
         details: [
           {
             year: '2023',

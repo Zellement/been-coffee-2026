@@ -150,7 +150,7 @@ const data: TimelineItem[] = [
 
 const imagery: ImageryItem[] = [
   {
-    src: '/locations/long-eaton/01.jpg',
+    src: '/media/locations/long-eaton/01.jpg',
     alt: 'Mock up of Long Eaton location',
   },
 ]
@@ -162,7 +162,7 @@ const description =
 defineOgImage('DefaultOgImage', {
   title: 'Been Coffee Long Eaton',
   description,
-  imageUrl: `${origin}/locations/long-eaton/01.jpg`,
+  imageUrl: `${origin}/media/locations/long-eaton/01.jpg`,
 })
 
 useHead({
@@ -174,7 +174,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: `${origin}/locations/long-eaton/01.jpg`,
+      content: `${origin}/media/locations/long-eaton/01.jpg`,
     },
   ],
 })

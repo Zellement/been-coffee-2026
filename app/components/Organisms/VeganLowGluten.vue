@@ -2,7 +2,7 @@
   <div class="grid grid-cols-1 xl:grid-cols-2">
     <div class="col-span-1 col-start-1 flex h-full max-h-75 xl:row-start-1 xl:max-h-120">
       <NuxtImg
-        src="index-03.jpeg"
+        src="/media/home/coffee-bagel.jpeg"
         alt="Vegan and Low-Gluten Options"
         class="block h-full w-full overflow-hidden object-cover"
         width="1000"
