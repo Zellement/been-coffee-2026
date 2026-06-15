@@ -1,22 +1,23 @@
 <template>
   <div class="w-full max-w-md">
     <UForm
+      :validate="validate"
+      :state="state"
       :class="hasFormSent"
       class="flex flex-col items-stretch gap-2"
-      @submit.prevent="submitForm"
+      @submit="submitForm"
     >
-      <UFormField label="Name">
-        <UInput ref="name" class="w-full" placeholder="Enter your name" />
+      <UFormField label="Name" name="name">
+        <UInput v-model="state.name" class="w-full" placeholder="Enter your name" />
       </UFormField>
-      <UFormField label="Email">
-        <UInput ref="email" class="w-full" placeholder="Enter your email" />
+      <UFormField label="Email" name="email">
+        <UInput v-model="state.email" class="w-full" placeholder="Enter your email" type="email" />
       </UFormField>
-      <UFormField label="Message">
-        <UTextarea ref="message" class="w-full" placeholder="Your message" />
+      <UFormField label="Message" name="message">
+        <UTextarea v-model="state.message" class="w-full" placeholder="Your message" />
       </UFormField>
-      <UButton class="btn mt-4 self-end" type="submit">Send message</UButton>
+      <UButton class="btn mt-4 self-end" type="submit" :loading="sending">Send message</UButton>
     </UForm>
-    <div v-if="sending" class="my-8">Please wait, we are sending your message...</div>
     <div
       v-if="success"
       ref="completeMessage"
@@ -28,43 +29,41 @@
 </template>
 
 <script setup lang="ts">
-const name: Ref<string> = ref('')
-const email: Ref<string> = ref('')
-const message: Ref<string> = ref('')
+import type { FormError } from '@nuxt/ui'
+
 const endpoint = 'https://formspree.io/f/xvgpyppg'
 
+const state = reactive({ name: '', email: '', message: '' })
 const sending: Ref<boolean> = ref(false)
 const success: Ref<boolean> = ref(false)
-
 const completeMessage: Ref<HTMLElement | null> = ref(null)
 
-const hasFormSent = computed(() => {
-  return success.value ? 'opacity-50 pointer-events-none' : ''
-})
+const hasFormSent = computed(() => (success.value ? 'opacity-50 pointer-events-none' : ''))
+
+const validate = (s: typeof state): FormError[] => {
+  const errors: FormError[] = []
+  if (!s.name.trim()) errors.push({ name: 'name', message: 'Name is required' })
+  if (!s.email.trim()) errors.push({ name: 'email', message: 'Email is required' })
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email))
+    errors.push({ name: 'email', message: 'Please enter a valid email address' })
+  if (!s.message.trim()) errors.push({ name: 'message', message: 'Message is required' })
+  return errors
+}
 
 const submitForm = async () => {
-  const data = {
-    name: name.value,
-    email: email.value,
-    message: message.value,
-  }
   try {
     sending.value = true
     const { error } = await useFetch(endpoint, {
       method: 'POST',
-      body: data,
-      headers: {
-        Accept: 'application/json',
-      },
+      body: state,
+      headers: { Accept: 'application/json' },
     })
     sending.value = false
     if (error.value) {
       console.error(error.value)
     } else {
       success.value = true
-      nextTick(() => {
-        completeMessage.value?.scrollIntoView()
-      })
+      nextTick(() => completeMessage.value?.scrollIntoView())
     }
   } catch (err) {
     sending.value = false

@@ -9,30 +9,29 @@
       />
     </h2>
     <UForm
+      :validate="validate"
+      :state="state"
       :class="hasFormSent"
       class="flex flex-col items-stretch gap-2"
-      @submit.prevent="submitForm"
+      @submit="submitForm"
     >
-      <UFormField label="Name">
-        <UInput ref="name" class="w-full" placeholder="Enter your name" />
+      <UFormField label="Name" name="name">
+        <UInput v-model="state.name" class="w-full" placeholder="Enter your name" />
       </UFormField>
-      <UFormField label="Email">
-        <UInput ref="email" class="w-full" placeholder="Enter your email" />
+      <UFormField label="Email" name="email">
+        <UInput v-model="state.email" class="w-full" placeholder="Enter your email" type="email" />
       </UFormField>
-      <UFormField label="Date &amp; time">
-        <UInput ref="date" class="w-full" type="datetime-local" />
+      <UFormField label="Date &amp; time" name="date">
+        <UInput v-model="state.date" class="w-full" type="datetime-local" />
       </UFormField>
-      <UFormField label="Number of people">
-        <UInput ref="people" class="w-full" type="number" />
+      <UFormField label="Number of people" name="people">
+        <UInput v-model="state.people" class="w-full" type="number" min="1" />
       </UFormField>
-      <UFormField label="More information">
-        <UTextarea ref="message" class="w-full" placeholder="Your message" />
+      <UFormField label="More information" name="message">
+        <UTextarea v-model="state.message" class="w-full" placeholder="Your message" />
       </UFormField>
-      <UButton class="btn mt-4 self-end" type="submit">Submit</UButton>
+      <UButton class="btn mt-4 self-end" type="submit" :loading="sending">Submit</UButton>
     </UForm>
-    <div v-if="sending" ref="isSending" class="my-8">
-      Please wait, we are sending your reservation request...
-    </div>
     <div
       v-if="success"
       ref="completeMessage"
@@ -46,60 +45,53 @@
 </template>
 
 <script setup lang="ts">
+import type { FormError } from '@nuxt/ui'
+
 interface Props {
   location: string
 }
 
 const props = defineProps<Props>()
 
-const name: Ref<string> = ref('')
-const email: Ref<string> = ref('')
-const date: Ref<string> = ref('')
-const people: Ref<string> = ref('')
-const message: Ref<string> = ref('')
-const locationName: Ref<string> = ref(props.location)
 const endpoint = 'https://formspree.io/f/xnnalyjq'
 
+const state = reactive({ name: '', email: '', date: '', people: '', message: '' })
 const sending: Ref<boolean> = ref(false)
 const success: Ref<boolean> = ref(false)
-
 const completeMessage: Ref<HTMLElement | null> = ref(null)
 
-const hasFormSent = computed(() => {
-  return success.value ? 'opacity-50 pointer-events-none' : ''
-})
+const hasFormSent = computed(() => (success.value ? 'opacity-50 pointer-events-none' : ''))
+
+const validate = (s: typeof state): FormError[] => {
+  const errors: FormError[] = []
+  if (!s.name.trim()) errors.push({ name: 'name', message: 'Name is required' })
+  if (!s.email.trim()) errors.push({ name: 'email', message: 'Email is required' })
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email))
+    errors.push({ name: 'email', message: 'Please enter a valid email address' })
+  if (!s.date) errors.push({ name: 'date', message: 'Please select a date and time' })
+  if (!s.people || Number(s.people) < 1)
+    errors.push({ name: 'people', message: 'Please enter the number of people' })
+  return errors
+}
 
 const submitForm = async () => {
-  const data = {
-    name: name.value,
-    email: email.value,
-    date: date.value,
-    people: people.value,
-    location: locationName.value,
-    message: message.value,
-  }
   try {
     sending.value = true
-    const { data: response, error } = await useFetch(endpoint, {
+    const { error } = await useFetch(endpoint, {
       method: 'POST',
-      body: data,
-      headers: {
-        Accept: 'application/json',
-      },
+      body: { ...state, location: props.location },
+      headers: { Accept: 'application/json' },
     })
+    sending.value = false
     if (error.value) {
-      sending.value = false
       console.error(error.value)
     } else {
-      sending.value = false
       success.value = true
-      nextTick(() => {
-        completeMessage.value?.scrollIntoView()
-      })
-      console.log(response.value)
+      nextTick(() => completeMessage.value?.scrollIntoView())
     }
-  } catch (error) {
-    console.error(error)
+  } catch (err) {
+    sending.value = false
+    console.error(err)
   }
 }
 </script>
