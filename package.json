@@ -19,15 +19,20 @@
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.8.2",
     "@nuxtjs/mdc": "^0.22.0",
+    "@nuxtjs/supabase": "^2.0.9",
     "@pinia/nuxt": "^0.11.3",
     "@resvg/resvg-js": "^2.6.2",
     "@takumi-rs/core": "^1.8.4",
     "isomorphic-dompurify": "2.26.0",
     "pinia": "^3.0.4",
-    "pinia-plugin-persistedstate": "^4.7.1"
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "serpapi": "^2.2.1"
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.2.11",
     "@iconify-json/material-symbols": "^1.2.78",
+    "@iconify-json/simple-icons": "^1.2.86",
+    "@iconify-json/tabler": "^1.2.35",
     "@nuxt/eslint": "latest",
     "@nuxt/scripts": "^1.2.1",
     "@nuxtjs/i18n": "10.4.0",

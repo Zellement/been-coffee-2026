@@ -131,6 +131,10 @@
         <LocationGetDirections postcode="DE65 6DX" label="Been Coffee Willington" />
       </div>
     </div>
+
+    <div class="container w-full container-px py-4">
+    <LocationReviews location="willington" />
+    </div>
   </UPage>
 </template>
 

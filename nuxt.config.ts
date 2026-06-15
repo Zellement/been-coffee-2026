@@ -19,7 +19,12 @@ export default defineNuxtConfig({
     'nuxt-viewport',
     '@pinia/nuxt',
     '@nuxtjs/mdc',
+    '@nuxtjs/supabase',
   ],
+
+  supabase: {
+    redirect: false,
+  },
 
   experimental: {
     defaults: {
