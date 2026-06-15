@@ -1,35 +1,40 @@
 <template>
-  <div class="container px-8 text-white flex gap-12 flex-col py-20">
+  <div class="container flex flex-col gap-12 px-8 py-20 text-white">
     <h2 class="flex flex-col">
       <DualLineText
         text="Committed"
         level="span"
-        class="text-3xl mx-auto"
+        class="mx-auto text-3xl"
         outline-class="text-butterscotch-500"
       />
       <DualLineText
         text="to sustainability."
         level="span"
-        class="text-3xl mx-auto"
+        class="mx-auto text-3xl"
         outline-class="text-butterscotch-500"
       />
     </h2>
-    <div class="grid grid-cols-1 text-center lg:grid-cols-12 gap-4 lg:text-left lg:gap-12">
-      <p class="max-w-160 mx-auto text-lg font-krete lg:col-span-4">
-        We choose brands and partners who share our
-        <span class="text-butterscotch-500">commitment to sustainability</span>, and we're always
-        looking for ways to reduce our environmental impact.
+    <div class="grid grid-cols-1 gap-4 text-center lg:grid-cols-12 lg:gap-12 lg:text-left">
+      <p class="font-krete mx-auto max-w-160 text-lg lg:col-span-5">
+        At Been Coffee, we believe that great coffee and great food shouldn't come at the expense of
+        the environment. From the day we opened in 2021, we've made conscious choices to
+        <span class="text-butterscotch-500">reduce our environmental impact</span> wherever
+        possible.
       </p>
-      <div class="flex flex-col gap-2 lg:col-start-5 lg:col-span-7">
+      <div class="flex flex-col gap-4 lg:col-span-7">
         <p>
-          We strive to make everything as environmentally friendly and sustainable as possible. Our
-          takeaway cups are compostable (even the lids!), our pre-packed drinks are all in cans (no
-          plastic!) and we strive to choose suppliers that share our vision for a greener future.
+          We work with brands and suppliers who share our
+          <span class="text-butterscotch-500">commitment to sustainability</span>, prioritising
+          responsibly sourced ingredients and environmentally conscious products. Our takeaway cups
+          are fully compostable - including the lids - and all of our pre-packaged cold drinks are
+          supplied in recyclable cans rather than plastic bottles.
         </p>
+
         <p>
-          When we opened in late 2021, we decided we wanted to prioritise helping our environment as
-          much as a small business can, by choosing to use sustainably sourced ingredients and
-          reduce the amount of non-recyclable waste we were producing.
+          As an independent business, we know we can't change the world overnight, but we're
+          committed to making better choices every day. Whether that's reducing non-recyclable
+          waste, improving our packaging, or partnering with like-minded suppliers, we're always
+          looking for ways to create a greener future for our community and the planet.
         </p>
       </div>
     </div>
@@ -45,12 +50,12 @@
       :items="imagery"
     >
       <div
-        class="bg-white flex items-center justify-center h-full w-full rounded-lg overflow-hidden p-4"
+        class="flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-white p-4"
       >
         <NuxtImg
           :src="item.src"
           :alt="item.alt"
-          class="object-contain h-full w-full rounded-lg overflow-hidden"
+          class="h-full w-full overflow-hidden rounded-lg object-contain"
         />
       </div>
     </UCarousel>
