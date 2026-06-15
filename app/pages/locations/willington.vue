@@ -2,7 +2,7 @@
   <UPage>
     <HeroStandard title="Willington">
       <UModal fullscreen title="Order for collection">
-        <UButton variant="outline" color="secondary" target="_blank">Order for collection</UButton>
+        <UButtonDefault color="secondary" target="_blank">Order for collection </UButtonDefault>
 
         <template #body>
           <iframe
@@ -55,7 +55,9 @@
             />
           </div>
         </UCarousel>
-        <UButton to="/gallery" class="mt-10 ml-auto" variant="outline">See more photos</UButton>
+        <UButtonDefault to="/gallery" class="mt-10 ml-auto" variant="outline"
+          >See more photos</UButtonDefault
+        >
       </div>
 
       <div id="bookTable" class="pt-12 lg:col-span-6">

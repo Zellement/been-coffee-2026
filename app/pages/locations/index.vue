@@ -16,7 +16,7 @@
           <h2 class="text-2xl font-bold">{{ location.label }}</h2>
           <UBadge color="tertiary" variant="outline" :label="location.labelSuffix" />
           <p class="">{{ location.description }}</p>
-          <UButton :href="location.to" class=""> View Location </UButton>
+          <UButtonDefault :href="location.to" class=""> View Location </UButtonDefault>
         </div>
       </UCard>
     </section>

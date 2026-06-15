@@ -42,7 +42,9 @@
             />
           </div>
         </UCarousel>
-        <UButton to="/gallery" class="mt-10 ml-auto" variant="outline">See more photos</UButton>
+        <UButtonDefault to="/gallery" class="mt-10 ml-auto" variant="outline"
+          >See more photos</UButtonDefault
+        >
       </div>
 
       <!-- <div id="bookTable" class="pt-12 lg:col-span-6">

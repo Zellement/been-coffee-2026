@@ -1,30 +1,55 @@
 <template>
-  <div class="container py-16 text-center">
-    <DualLineText
-      text="Award-winning."
-      level="h2"
-      class="text-3xl block text-tuscany-500 mb-12"
-      outline-class="text-navy-500 "
-    />
+  <div class="xl:grid-cols-2 grid grid-cols-1">
+    <div class="col-span-1 h-full col-start-1 xl:row-start-1 max-h-200 flex">
+      <NuxtImg
+        src="awards.jpeg"
+        alt="Award Winning Coffee"
+        class="object-cover block h-full w-full overflow-hidden"
+        width="1000"
+        height="1000"
+        fit="cover"
+      />
+    </div>
+    <div
+      class="container mx-auto py-16 text-center w-full flex xl:col-span-full xl:grid xl:grid-cols-2 xl:row-start-1"
+    >
+      <div class="xl:col-start-2 w-full">
+        <DualLineText
+          text="Award-winning."
+          level="h2"
+          class="text-3xl block text-tuscany-500 mb-12"
+          outline-class="text-navy-500"
+        />
 
-    <div class="flex flex-col lg:grid lg:grid-cols-3">
-      <div
-        v-for="(column, colIndex) in awardColumns"
-        :key="colIndex"
-        class="flex flex-col items-center gap-8 p-4"
-      >
-        <div
-          v-for="(award, awardIndex) in column.awards"
-          :key="awardIndex"
-          class="flex flex-col items-center gap-4 w-full"
-        >
-          <img :src="award.logoUrl" alt="Award Logo" class="w-28 h-auto" />
-          <div class="text-center text-sm font-krete">
-            <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
-              <p class="font-bold">{{ yearGroup.year }}</p>
-              <p v-for="(detail, di) in yearGroup.details" :key="di">
-                {{ detail.title }}
-              </p>
+        <div class="flex flex-col lg:grid lg:grid-cols-3">
+          <div
+            v-for="(column, colIndex) in awardColumns"
+            :key="colIndex"
+            class="flex flex-col items-center gap-8 p-4"
+          >
+            <div
+              v-for="(award, awardIndex) in column.awards"
+              :key="awardIndex"
+              class="flex flex-col items-center gap-4 w-full"
+            >
+              <img :src="award.logoUrl" alt="Award Logo" class="w-28 h-auto" />
+              <div class="text-center text-sm font-krete">
+                <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
+                  <UBadge :label="yearGroup.year" class="mb-1" color="tertiary" />
+                  <ul class="flex flex-col gap-1">
+                    <li v-for="(detail, di) in yearGroup.details" :key="di">
+                      <UBadge
+                        :label="detail.title"
+                        variant="outline"
+                        :ui="{
+                          base: '',
+                          label: 'whitespace-break-spaces',
+                        }"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

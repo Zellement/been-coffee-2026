@@ -42,12 +42,12 @@
         </div>
         <p class="text-lg mt-4 font-krete">And now in two locations.</p>
         <div class="flex gap-2 mt-4">
-          <UButton href="/locations/willington" color="neutral" variant="subtle">
+          <UButtonDefault href="/locations/willington" color="neutral" variant="subtle">
             Willington
-          </UButton>
-          <UButton href="/locations/long-eaton" color="neutral" variant="subtle">
+          </UButtonDefault>
+          <UButtonDefault href="/locations/long-eaton" color="neutral" variant="subtle">
             Long Eaton
-          </UButton>
+          </UButtonDefault>
         </div>
       </div>
     </div>

@@ -39,7 +39,9 @@
         class="object-cover h-full w-full rounded-lg overflow-hidden"
       />
     </UCarousel>
-    <UButton class="mt-20" color="secondary" to="/gallery"> View More Photos </UButton>
+    <UButtonDefault class="mt-20" color="secondary" to="/gallery">
+      View More Photos
+    </UButtonDefault>
   </div>
 </template>
 
