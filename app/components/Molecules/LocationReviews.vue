@@ -8,15 +8,10 @@
             <UCard>
                 <template #header>
                     <div class="flex items-center gap-2">
-                        <UAvatarGroup v-if="review.userImage" size="sm">
+                        <UAvatarGroup size="sm">
                             <UAvatar :icon="platformIcon(review.source)" />
-                            <UAvatar :src="review.userImage" :alt="review.name" />
+                            <UAvatar v-if="review.userImage" :src="review.userImage" :alt="review.name" />
                         </UAvatarGroup>
-                        <UAvatar
-                            v-else
-                            :icon="platformIcon(review.source)"
-                            size="sm"
-                        />
                         <div>
                             <p class="text-sm font-semibold leading-tight">{{ review.name }}</p>
                             <p class="text-muted text-xs">{{ review.date }}</p>
@@ -126,7 +121,7 @@ function normaliseTripadvisor(review: Record<string, unknown>, index: number): N
         name: user?.username as string ?? 'Anonymous',
         date: rawDate ? formatIsoDate(rawDate) : '',
         rating: review.rating as number ?? 0,
-        userImage: user?.avatar as string | undefined,
+        userImage: (user?.avatar as Record<string, unknown> | undefined)?.thumbnail as string | undefined,
         title: review.title as string | undefined,
         text: review.text as string | undefined
     }
@@ -135,7 +130,7 @@ function normaliseTripadvisor(review: Record<string, unknown>, index: number): N
 const mergedReviews = computed((): NormalisedReview[] => {
     const google = (googleRaw.value ?? []).map(normaliseGoogle)
     const tripadvisor = (tripadvisorRaw.value ?? []).map(normaliseTripadvisor)
-    return [...google, ...tripadvisor].filter((r) => r.rating > 4)
+    return [...google, ...tripadvisor].filter((r) => r.rating >= 4)
 })
 
 function hasDetails(details: ReviewDetails): boolean {
