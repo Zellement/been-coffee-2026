@@ -86,7 +86,7 @@ const awardColumns: AwardColumn[] = [
           {
             year: '2026',
             details: [
-              { title: 'Best Independent Coffee Shop 2026' },
+              { title: 'Best Independent Coffee Shop' },
               { title: 'Sustainability Excellence Award' },
             ],
           },
