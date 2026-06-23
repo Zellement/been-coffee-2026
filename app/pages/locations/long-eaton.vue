@@ -1,7 +1,7 @@
 <template>
   <UPage>
     <HeroStandard title-brow="Been Coffee" title="Long Eaton" />
-    <div class="container w-full lg:hidden">
+    <!-- <div class="container w-full lg:hidden">
       <div class="flex gap-2 overflow-x-auto p-2 pb-3">
         <UButton
           v-for="item in pageNav"
@@ -13,7 +13,7 @@
           >{{ item.name }}</UButton
         >
       </div>
-    </div>
+    </div> -->
     <div id="overview" class="container-px container grid py-4 lg:grid-cols-12 lg:gap-10">
       <UTimeline :default-value="2" :items="data" class="w-full lg:col-span-4">
         <template #title="{ item }">
@@ -88,48 +88,56 @@
           </template>
         </UAccordion>
       </div>
-      <div id="directions" class="col-span-full pt-12">
-        <LocationGetDirections postcode="NG10 3RJ" label="Been Coffee Long Eaton" />
-      </div>
+      <!-- <div id="directions" class="lg:col-span-6 pt-12">
+        <LocationGetDirections postcode="Boots Court, NG10 3RJ" label="Been Coffee Long Eaton" />
+      </div> -->
     </div>
   </UPage>
 </template>
 
 <script setup lang="ts">
 import type { TimelineItem, AccordionItem } from '@nuxt/ui'
-import Faqs from '~/data/faqs.json'
+// import Faqs from '~/data/faqs.json'
 
 const { origin } = useRequestURL()
 
-const pageNav = [
-  { name: 'Opening Hours', href: '#overview' },
-  { name: 'Address', href: '#overview' },
-  { name: 'Telephone', href: '#overview' },
-  { name: 'Gallery', href: '#gallery' },
-  { name: 'Book a Table', href: '#bookTable' },
-  { name: 'Directions', href: '#directions' },
-]
+// const pageNav = [
+//   { name: 'Opening Hours', href: '#overview' },
+//   { name: 'Address', href: '#overview' },
+//   { name: 'Telephone', href: '#overview' },
+//   { name: 'Gallery', href: '#gallery' },
+//   { name: 'Book a Table', href: '#bookTable' },
+//   { name: 'Directions', href: '#directions' },
+// ]
 
 const accordionItems: AccordionItem[] = [
-  ...Faqs,
+  // ...Faqs,
+  {
+    label: 'When do you open?',
+    content: 'We are currently under construction and will be opening in Winter 2026.',
+  },
   {
     label: 'What is parking like?',
     content:
       'There is fast turnover of cars on a daily basis as people tend to visit and go. There is street parking over the road, too, for busier days.',
   },
   {
-    label: 'Do you have highchairs and baby changing facilities?',
-    content:
-      "We have two highchairs available for use and a fold-away baby changing station in the accessible toilet. Please be advised these are used at the customer's own risk.",
-  },
+    label: 'Are you hiring?',
+    content: 'We will be! Visit out <a href="https://linktr.ee/beencoffeeuk" target="_blank" rel="noopener noreferrer">Linktree</a> for more information.',
+  }
+  // {
+  //   label: 'Do you have highchairs and baby changing facilities?',
+  //   content:
+  //     "We have two highchairs available for use and a fold-away baby changing station in the accessible toilet. Please be advised these are used at the customer's own risk.",
+  // },
 ]
 
 const data: TimelineItem[] = [
-  {
-    date: 'Opening Hours',
-    title: 'Monday - Friday: 07:00 - 17:30<br />Saturday - Sunday: 08:00 - 17:30',
-    icon: 'mdi-clock-outline',
-  },
+  // {
+  //   date: 'Opening Hours',
+  //   title: 'Monday - Friday: 07:00 - 17:30<br />Saturday - Sunday: 08:00 - 17:30',
+  //   icon: 'mdi-clock-outline',
+  // },
   {
     date: 'Address',
     title: 'Boots Court,<br />Cranfleet Way,<br />Long Eaton,<br />Nottinghamshire<br />NG10 3RJ',
@@ -138,7 +146,7 @@ const data: TimelineItem[] = [
 
   {
     date: 'Opening',
-    title: 'Autumn 2026',
+    title: 'Winter 2026',
     icon: 'mdi-calendar-month-outline',
   },
   // {

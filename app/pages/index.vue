@@ -29,6 +29,10 @@
     <section class="bg-linear-to-br from-tuscany-500 to-tuscany-600">
       <CommittedToSustainability />
     </section>
+
+    <section class="">
+      <SocialFeed />
+    </section>
   </UPage>
 </template>
 
