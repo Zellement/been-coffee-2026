@@ -5,13 +5,13 @@
         text="Bagels,"
         level="span"
         class="text-3xl text-butterscotch-500 mx-auto"
-        outline-class="text-white"
+        outline-class="after:text-white"
       />
       <DualLineText
         text="Bacon & Brownies."
         level="span"
         class="text-3xl text-butterscotch-500 mx-auto"
-        outline-class="text-white"
+        outline-class="after:text-white"
       />
     </h2>
     <p class="max-w-160 mx-auto font-krete text-lg">
@@ -23,6 +23,7 @@
       <span class="text-butterscotch-500">traditional scotch eggs</span>, and much, much more.
     </p>
     <UCarousel
+      v-slot="{ item }"
       class="mt-20 mx-20"
       :ui="{
         item: 'basis-full md:basis-1/2 xl:basis-1/3 aspect-square',
@@ -30,7 +31,6 @@
       arrows
       loop
       dots
-      v-slot="{ item }"
       :items="imagery"
     >
       <nuxt-img

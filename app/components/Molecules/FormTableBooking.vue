@@ -66,7 +66,7 @@ const validate = (s: typeof state): FormError[] => {
   const errors: FormError[] = []
   if (!s.name.trim()) errors.push({ name: 'name', message: 'Name is required' })
   if (!s.email.trim()) errors.push({ name: 'email', message: 'Email is required' })
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email))
+  else if (!/^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/.test(s.email))
     errors.push({ name: 'email', message: 'Please enter a valid email address' })
   if (!s.date) errors.push({ name: 'date', message: 'Please select a date and time' })
   if (!s.people || Number(s.people) < 1)

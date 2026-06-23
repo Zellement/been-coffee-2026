@@ -14,7 +14,7 @@
         autoplay
         class="h-full w-full object-cover"
       >
-        <source :src="item" type="video/mp4" />
+        <source :src="item" type="video/mp4" >
       </video>
       <NuxtImg
         v-else

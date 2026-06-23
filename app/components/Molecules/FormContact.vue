@@ -44,7 +44,7 @@ const validate = (s: typeof state): FormError[] => {
   const errors: FormError[] = []
   if (!s.name.trim()) errors.push({ name: 'name', message: 'Name is required' })
   if (!s.email.trim()) errors.push({ name: 'email', message: 'Email is required' })
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email))
+  else if (!/^[^\s@]+@[^\s@][^\s.@]*\.[^\s@]+$/.test(s.email))
     errors.push({ name: 'email', message: 'Please enter a valid email address' })
   if (!s.message.trim()) errors.push({ name: 'message', message: 'Message is required' })
   return errors

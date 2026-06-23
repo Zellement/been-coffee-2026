@@ -3,17 +3,17 @@ import { defineStore } from 'pinia'
 export const useUiStore = defineStore('ui', () => {
   /**
    * State
-   **/
+   */
   const showMobileNav: Ref<boolean> = ref(false)
   const animationsDisabled: Ref<boolean> = ref(false)
 
   /**
    * Getters
-   **/
+   */
 
   /**
    * Actions
-   **/
+   */
   const toggleShowMobileNav = (visible?: boolean) => {
     if (visible) {
       showMobileNav.value = visible
@@ -32,7 +32,7 @@ export const useUiStore = defineStore('ui', () => {
 
   /**
    * Return
-   **/
+   */
   return {
     showMobileNav,
     animationsDisabled,

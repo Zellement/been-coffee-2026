@@ -19,13 +19,13 @@
             text="Vegan and"
             level="span"
             class="mx-auto text-3xl"
-            outline-class="text-butterscotch-500"
+            outline-class="after:text-butterscotch-500"
           />
           <DualLineText
             text="Low-Gluten Options."
             level="span"
             class="mx-auto text-3xl"
-            outline-class="text-butterscotch-500"
+            outline-class="after:text-butterscotch-500"
           />
         </h2>
         <ul class="flex w-full flex-wrap items-center justify-center gap-2">

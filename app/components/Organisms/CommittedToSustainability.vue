@@ -5,13 +5,13 @@
         text="Committed"
         level="span"
         class="mx-auto text-3xl"
-        outline-class="text-butterscotch-500"
+        outline-class="after:text-butterscotch-500"
       />
       <DualLineText
         text="to sustainability."
         level="span"
         class="mx-auto text-3xl"
-        outline-class="text-butterscotch-500"
+        outline-class="after:text-butterscotch-500"
       />
     </h2>
     <div class="grid grid-cols-1 gap-4 text-center lg:grid-cols-12 lg:gap-12 lg:text-left">

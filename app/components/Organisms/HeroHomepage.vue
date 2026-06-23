@@ -24,20 +24,20 @@
           text="Been Coffee"
           level="h1"
           class="text-5xl lg:text-4xl"
-          outline-class="text-butterscotch-500"
+          outline-class="after:text-butterscotch-500"
         />
         <div class="flex flex-col sm:flex-row sm:gap-2">
           <DualLineText
             text="Award Winning."
             level="h2"
             class="text-2xl"
-            outline-class="text-butterscotch-500"
+            outline-class="after:text-butterscotch-500"
           />
           <DualLineText
             text="Independent."
             level="h2"
             class="text-2xl"
-            outline-class="text-butterscotch-500"
+            outline-class="after:text-butterscotch-500"
           />
         </div>
         <p class="text-lg mt-4 font-krete">And now in two locations.</p>

@@ -18,7 +18,7 @@
           text="Award-winning."
           level="h2"
           class="text-tuscany-500 mb-12 block text-3xl"
-          outline-class="text-navy-500"
+          outline-class="after:text-navy-500"
         />
 
         <div class="flex flex-col lg:grid lg:grid-cols-3">
@@ -32,7 +32,7 @@
               :key="awardIndex"
               class="flex w-full flex-col items-center gap-4"
             >
-              <img :src="award.logoUrl" alt="Award Logo" class="h-auto w-28" />
+              <img :src="award.logoUrl" alt="Award Logo" class="h-auto w-28" >
               <div class="font-krete text-center text-sm">
                 <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
                   <UBadge :label="yearGroup.year" class="mb-1" color="tertiary" />

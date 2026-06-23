@@ -31,7 +31,7 @@ defineProps({
         {{ description }}
       </p>
       <div v-if="imageUrl" class="w-full h-25 mt-4">
-        <img :src="imageUrl" alt="OG Image" class="w-full h-full object-cover" />
+        <img :src="imageUrl" alt="OG Image" class="w-full h-full object-cover" >
       </div>
     </div>
   </div>

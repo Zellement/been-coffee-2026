@@ -10,13 +10,13 @@
         :text="titleBrow"
         level="span"
         class="-mb-2 text-xl whitespace-normal text-white"
-        outline-class="text-butterscotch-500"
+        outline-class="after:text-butterscotch-500"
       />
       <DualLineText
         :text="title"
         level="span"
         class="text-3xl whitespace-normal text-white"
-        outline-class="text-butterscotch-500"
+        outline-class="after:text-butterscotch-500"
       />
     </h1>
     <div class="container-px relative container mt-4 text-center md:text-left">

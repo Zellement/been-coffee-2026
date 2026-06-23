@@ -1,14 +1,12 @@
 <template>
-  <span class="relative font-riverside whitespace-nowrap inline-block">
-    <component :class="backgroundClass" :is="level">{{ text }}</component>
-    <span
-      class="absolute w-full h-full inset-0 translate-x-0.5 translate-y-1 font-riverside-outline whitespace-nowrap"
-      aria-hidden="true"
-      :class="outlineClass"
-    >
-      {{ text }}
-    </span>
-  </span>
+  <component
+    :is="level"
+    :data-text="text"
+    class="relative inline-block whitespace-nowrap font-riverside after:absolute after:inset-0 after:h-full after:w-full after:translate-x-0.5 after:translate-y-1 after:whitespace-nowrap after:font-riverside-outline after:content-[attr(data-text)]"
+    :class="[backgroundClass, outlineClass]"
+  >
+    {{ text }}
+  </component>
 </template>
 
 <script lang="ts" setup>
