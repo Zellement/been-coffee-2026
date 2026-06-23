@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/mdc',
     '@nuxtjs/supabase',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
   ],
 
   supabase: {
@@ -68,13 +68,14 @@ export default defineNuxtConfig({
     },
   },
 
-  // scripts: {
-  //     registry: {
-  //         googleTagManager: {
-  //             id: import.meta.env.GTM_ID
-  //         }
-  //     }
-  // },
+  scripts: {
+    registry: {
+      googleAnalytics: {
+        id: 'G-CVLJZSC9E6',
+        trigger: 'onNuxtReady',
+      },
+    },
+  },
 
   icon: {
     customCollections: [
