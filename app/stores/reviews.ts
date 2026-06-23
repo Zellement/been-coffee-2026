@@ -1,5 +1,11 @@
 import { defineStore } from 'pinia'
 
+interface ReviewsRow {
+    id: number
+    reviews_tripadvisor_willington: unknown[] | null
+    reviews_google_willington: unknown[] | null
+}
+
 export const useReviewsStore = defineStore('reviews', {
     state: () => ({
         reviewsTripadvisorWillington: null as unknown[] | null,
@@ -13,8 +19,9 @@ export const useReviewsStore = defineStore('reviews', {
                 .select('reviews_tripadvisor_willington')
                 .eq('id', 1)
 
-            if (!error && data?.[0]?.reviews_tripadvisor_willington?.length > 0) {
-                this.reviewsTripadvisorWillington = data[0].reviews_tripadvisor_willington
+            const rows = data as Pick<ReviewsRow, 'reviews_tripadvisor_willington'>[] | null
+            if (!error && rows?.[0]?.reviews_tripadvisor_willington?.length) {
+                this.reviewsTripadvisorWillington = rows[0].reviews_tripadvisor_willington
                 return
             }
 
@@ -24,7 +31,7 @@ export const useReviewsStore = defineStore('reviews', {
                     this.reviewsTripadvisorWillington = result.data
                     await client
                         .from('reviews')
-                        .update({ reviews_tripadvisor_willington: result.data })
+                        .update({ reviews_tripadvisor_willington: result.data } as never)
                         .eq('id', 1)
                 }
             } catch (err) {
@@ -38,8 +45,9 @@ export const useReviewsStore = defineStore('reviews', {
                 .select('reviews_google_willington')
                 .eq('id', 1)
 
-            if (!error && data?.[0]?.reviews_google_willington?.length > 0) {
-                this.reviewsGoogleWillington = data[0].reviews_google_willington
+            const rows = data as Pick<ReviewsRow, 'reviews_google_willington'>[] | null
+            if (!error && rows?.[0]?.reviews_google_willington?.length) {
+                this.reviewsGoogleWillington = rows[0].reviews_google_willington
                 return
             }
 
@@ -49,7 +57,7 @@ export const useReviewsStore = defineStore('reviews', {
                     this.reviewsGoogleWillington = result.reviews
                     await client
                         .from('reviews')
-                        .update({ reviews_google_willington: result.reviews })
+                        .update({ reviews_google_willington: result.reviews } as never)
                         .eq('id', 1)
                 }
             } catch (err) {

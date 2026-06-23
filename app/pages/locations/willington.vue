@@ -113,7 +113,7 @@
             level="span"
           />
         </h2>
-        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div class="grid grid-cols-1 gap-6 xs:grid-cols-2">
           <UCard v-for="(item, index) in team" :key="index" class="">
             <template #header>
               <NuxtImg width="500" height="650" :src="item.image" />
@@ -128,7 +128,7 @@
       </div>
 
       <div id="directions" class="col-span-full lg:col-span-6">
-        <LocationGetDirections postcode="DE65 6DX" label="Been Coffee Willington" />
+        <LocationGetDirections postcode="Been Coffee, DE65 6DX" label="Been Coffee Willington" />
       </div>
     </div>
 
