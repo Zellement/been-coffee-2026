@@ -47,7 +47,6 @@
 </template>
 
 <script setup lang="ts">
-import { useReviewsStore } from '@/stores/reviews'
 
 interface ReviewDetails {
     food?: string
@@ -89,6 +88,13 @@ function platformIcon(source: 'google' | 'tripadvisor'): string {
     return source === 'google' ? 'tabler:brand-google-filled' : 'tabler:brand-tripadvisor'
 }
 
+function timeAgo(date: string | undefined): string {
+    if (!date) return ''
+    const parsed = new Date(date)
+    if (Number.isNaN(parsed.getTime())) return ''
+    return useTimeAgo(parsed).value
+}
+
 function normaliseGoogle(review: Record<string, unknown>, index: number): NormalisedReview {
     const user = review.user as Record<string, unknown>
     const details = review.details as ReviewDetails | undefined
@@ -96,7 +102,7 @@ function normaliseGoogle(review: Record<string, unknown>, index: number): Normal
         id: `google-${index}`,
         source: 'google',
         name: user?.name as string ?? 'Anonymous',
-        date: review.date as string ?? '',
+        date: (review.date as string) ?? '',
         rating: review.rating as number ?? 0,
         userImage: user?.thumbnail as string | undefined,
         text: review.snippet as string | undefined,
@@ -104,22 +110,13 @@ function normaliseGoogle(review: Record<string, unknown>, index: number): Normal
     }
 }
 
-function formatIsoDate(iso: string): string {
-    return new Date(iso).toLocaleDateString('en-GB', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric'
-    })
-}
-
 function normaliseTripadvisor(review: Record<string, unknown>, index: number): NormalisedReview {
     const user = review.user as Record<string, unknown>
-    const rawDate = review.published_date as string ?? ''
     return {
         id: `tripadvisor-${index}`,
         source: 'tripadvisor',
         name: user?.username as string ?? 'Anonymous',
-        date: rawDate ? formatIsoDate(rawDate) : '',
+        date: timeAgo(review.published_date as string | undefined),
         rating: review.rating as number ?? 0,
         userImage: (user?.avatar as Record<string, unknown> | undefined)?.thumbnail as string | undefined,
         title: review.title as string | undefined,

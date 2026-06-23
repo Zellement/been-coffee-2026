@@ -23,6 +23,8 @@
     "@pinia/nuxt": "^0.11.3",
     "@resvg/resvg-js": "^2.6.2",
     "@takumi-rs/core": "^1.8.4",
+    "@vueuse/core": "^14.3.0",
+    "@vueuse/nuxt": "^14.3.0",
     "isomorphic-dompurify": "2.26.0",
     "pinia": "^3.0.4",
     "pinia-plugin-persistedstate": "^4.7.1",

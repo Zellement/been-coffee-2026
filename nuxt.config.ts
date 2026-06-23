@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/mdc',
     '@nuxtjs/supabase',
+    '@vueuse/nuxt'
   ],
 
   supabase: {
