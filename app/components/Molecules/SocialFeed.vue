@@ -1,5 +1,5 @@
 <template>
-<div class="">
+<div>
   <div id="curator-feed-default-feed-layout"/>
 </div>
 </template>
