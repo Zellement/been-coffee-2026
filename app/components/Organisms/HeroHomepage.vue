@@ -1,11 +1,11 @@
 <template>
-  <section role="banner" class="w-full h-[105dvh] relative block-clip--left">
+  <section role="banner" class="block-clip--left relative h-[105dvh] w-full">
     <video
       src="/media/home/hero/hero-mob.mp4"
       autoplay
       loop
       muted
-      class="w-full xl:hidden fixed inset-0 h-full object-cover"
+      class="fixed inset-0 h-full w-full object-cover xl:hidden"
       poster="/media/home/hero/hero-poster.jpg"
     />
     <video
@@ -13,40 +13,40 @@
       autoplay
       loop
       muted
-      class="w-full hidden xl:block fixed inset-0 h-full object-cover"
+      class="fixed inset-0 hidden h-full w-full object-cover xl:block"
       poster="/media/home/hero/hero-poster.jpg"
     />
     <div
-      class="absolute inset-0 flex flex-col items-start justify-end p-4 bg-opacity-50 text-white pb-[calc(5dvh+2rem)]"
+      class="bg-opacity-50 absolute inset-0 flex flex-col items-start justify-end p-4 pb-[calc(5dvh+2rem)] text-white"
     >
-      <div class="container container-px flex flex-col">
+      <div class="container-px container flex flex-col">
         <DualLineText
           text="Been Coffee"
           level="h1"
-          class="text-5xl lg:text-4xl"
+          class="text-5xl"
           outline-class="after:text-butterscotch-500"
         />
         <div class="flex flex-col sm:flex-row sm:gap-2">
           <DualLineText
             text="Award Winning."
             level="h2"
-            class="text-2xl"
+            class="text-2xl xl:text-3xl"
             outline-class="after:text-butterscotch-500"
           />
           <DualLineText
             text="Independent."
             level="h2"
-            class="text-2xl"
+            class="text-2xl xl:text-3xl"
             outline-class="after:text-butterscotch-500"
           />
         </div>
-        <p class="text-lg mt-4 font-krete">And now in two locations.</p>
-        <div class="flex gap-2 mt-4">
+        <p class="font-krete mt-4 text-lg">And soon in two locations.</p>
+        <div class="mt-4 flex gap-2">
           <UButtonDefault href="/locations/willington" color="neutral" variant="subtle">
             Willington
           </UButtonDefault>
           <UButtonDefault href="/locations/long-eaton" color="neutral" variant="subtle">
-            Long Eaton
+            Long Eaton <UBadge variant="outline">Opening Soon</UBadge>
           </UButtonDefault>
         </div>
       </div>
