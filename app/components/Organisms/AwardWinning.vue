@@ -1,19 +1,21 @@
 <template>
   <div class="grid grid-cols-1 xl:grid-cols-2">
-    <div class="col-span-1 col-start-1 flex h-full max-h-75 xl:row-start-1 xl:max-h-200">
-      <NuxtImg
-        src="/media/home/awards.jpeg"
-        alt="Award Winning Coffee"
-        class="block h-full w-full overflow-hidden object-cover"
-        width="1000"
-        height="1000"
-        fit="cover"
-      />
+    <div class="relative col-span-1 col-start-1 flex h-full xl:row-start-1">
+      <div class="absolute inset-0">
+        <NuxtImg
+          src="/media/home/awards.jpeg"
+          alt="Award Winning Coffee"
+          class="block h-full w-full overflow-hidden object-cover"
+          width="1000"
+          height="1000"
+          fit="cover"
+        />
+      </div>
     </div>
     <div
       class="container mx-auto flex w-full py-16 text-center xl:col-span-full xl:row-start-1 xl:grid xl:grid-cols-2"
     >
-      <div class="w-full xl:col-start-2">
+      <div class="@container w-full xl:col-start-2">
         <DualLineText
           text="Award-winning."
           level="h2"
@@ -21,7 +23,7 @@
           outline-class="after:text-navy-500"
         />
 
-        <div class="flex flex-col lg:grid lg:grid-cols-3">
+        <div class="flex flex-col lg:grid @sm:grid-cols-2">
           <div
             v-for="(column, colIndex) in awardColumns"
             :key="colIndex"
@@ -32,7 +34,7 @@
               :key="awardIndex"
               class="flex w-full flex-col items-center gap-4"
             >
-              <img :src="award.logoUrl" alt="Award Logo" class="h-auto w-28" >
+              <img :src="award.logoUrl" alt="Award Logo" class="h-auto w-28" />
               <div class="font-krete text-center text-sm">
                 <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
                   <UBadge :label="yearGroup.year" class="mb-1" color="tertiary" />

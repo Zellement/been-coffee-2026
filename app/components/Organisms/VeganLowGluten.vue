@@ -1,19 +1,23 @@
 <template>
   <div class="grid grid-cols-1 xl:grid-cols-2">
-    <div class="col-span-1 col-start-1 flex h-full max-h-75 xl:row-start-1 xl:max-h-120">
-      <NuxtImg
-        src="/media/home/coffee-bagel.jpeg"
-        alt="Vegan and Low-Gluten Options"
-        class="block h-full w-full overflow-hidden object-cover"
-        width="1000"
-        height="1000"
-        fit="cover"
-      />
+    <div class="relative col-span-1 col-start-1 flex h-full xl:row-start-1">
+      <div class="absolute inset-0">
+        <NuxtImg
+          src="/media/home/coffee-bagel.jpeg"
+          alt="Vegan and Low-Gluten Options"
+          class="block h-full w-full overflow-hidden object-cover"
+          width="1000"
+          height="1000"
+          fit="cover"
+        />
+      </div>
     </div>
     <div
       class="container-px container mx-auto flex w-full text-center xl:col-span-full xl:row-start-1 xl:grid xl:grid-cols-2"
     >
-      <div class="text-navy-500 my-auto flex w-full flex-col gap-4 py-20 xl:col-start-2 xl:p-8">
+      <div
+        class="text-navy-500 my-auto flex w-full flex-col gap-4 py-20 xl:col-start-2 xl:p-12 2xl:p-20"
+      >
         <h2 class="flex flex-col">
           <DualLineText
             text="Vegan and"
