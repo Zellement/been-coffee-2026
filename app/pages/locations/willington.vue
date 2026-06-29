@@ -113,10 +113,10 @@
             level="span"
           />
         </h2>
-        <div class="grid grid-cols-1 gap-6 xs:grid-cols-2">
+        <div class="xs:grid-cols-2 grid grid-cols-1 gap-6">
           <UCard v-for="(item, index) in team" :key="index" class="">
             <template #header>
-              <NuxtImg width="500" height="650" :src="item.image" />
+              <NuxtImg width="500" height="650" :src="transformImage(item.image, 500, 650)" />
             </template>
             <div class="flex flex-col items-start gap-2">
               <h2 class="text-lg font-bold">{{ item.label }}</h2>
@@ -132,7 +132,7 @@
       </div>
     </div>
 
-    <div class="container w-full container-px py-4">
+    <div class="container-px container w-full py-4">
       <LocationReviews location="willington" />
     </div>
   </UPage>
@@ -143,6 +143,7 @@ import type { TimelineItem, AccordionItem } from '@nuxt/ui'
 import Faqs from '~/data/faqs.json'
 import TeamMembers from '~/data/team.json'
 
+const { transformImage } = useImageTransforms()
 const { origin } = useRequestURL()
 
 const pageNav = [
