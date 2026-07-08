@@ -15,19 +15,19 @@
       class="flex flex-col items-stretch gap-2"
       @submit="submitForm"
     >
-      <UFormField label="Name" name="name">
+      <UFormField label="Name *" name="name">
         <UInput v-model="state.name" class="w-full" placeholder="Enter your name" />
       </UFormField>
-      <UFormField label="Email" name="email">
+      <UFormField label="Email *" name="email">
         <UInput v-model="state.email" class="w-full" placeholder="Enter your email" type="email" />
       </UFormField>
-      <UFormField label="Date &amp; time" name="date">
+      <UFormField label="Date &amp; time *" name="date">
         <UInput v-model="state.date" class="w-full" type="datetime-local" />
       </UFormField>
-      <UFormField label="Number of people" name="people">
+      <UFormField label="Number of people *" name="people">
         <UInput v-model="state.people" class="w-full" type="number" min="1" />
       </UFormField>
-      <UFormField label="More information" name="message">
+      <UFormField label="More information *" name="message">
         <UTextarea v-model="state.message" class="w-full" placeholder="Your message" />
       </UFormField>
       <p class="mt-4 text-sm">
