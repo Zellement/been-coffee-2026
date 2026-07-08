@@ -3,7 +3,7 @@
     <h2 class="flex flex-col">
       <DualLineText class="text-xl" :text="`Book a table at`" level="span" />
       <DualLineText
-        class="mb-4 -mt-1 text-2xl text-tuscany-500"
+        class="text-tuscany-500 -mt-1 mb-4 text-2xl"
         :text="` ${props.location}`"
         level="span"
       />
@@ -30,6 +30,11 @@
       <UFormField label="More information" name="message">
         <UTextarea v-model="state.message" class="w-full" placeholder="Your message" />
       </UFormField>
+      <p class="mt-4 text-sm">
+        By submitting this form, you agree to our
+        <a href="/privacy-policy" class="text-tuscany-500 underline">privacy policy</a> and to be
+        contacted by Been Coffee regarding your reservation.
+      </p>
       <UButton class="btn mt-4 self-end" type="submit" :loading="sending">Submit</UButton>
     </UForm>
     <div
