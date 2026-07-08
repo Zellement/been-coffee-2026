@@ -37,14 +37,15 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Been Coffee - Award-winning coffee shops | Willington, Derby & Long Eaton, Nottingham',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Been Coffee is an independent, award-winning coffee shop with amazing coffee, tea, bubble tea, boba tea, cakes, bagels, cobs & paninis in Willington, Derby & Long Eaton, Nottingham UK.',
-    },
-  ],
+const title =
+  'Been Coffee - Award-winning coffee shops | Willington, Derby & Long Eaton, Nottingham'
+const description =
+  'Been Coffee is an independent, award-winning coffee shop with amazing coffee, tea, bubble tea, boba tea, cakes, bagels, cobs & paninis in Willington, Derby & Long Eaton, Nottingham UK.'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
 })
 </script>

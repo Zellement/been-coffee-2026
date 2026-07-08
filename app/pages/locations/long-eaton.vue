@@ -204,17 +204,12 @@ useSchemaOrg([
   }),
 ])
 
-useHead({
+useSeoMeta({
   title,
-  meta: [
-    {
-      name: 'description',
-      content: description,
-    },
-    {
-      property: 'og:image',
-      content: `${origin}/media/locations/long-eaton/01.jpg`,
-    },
-  ],
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogImage: `${origin}/media/locations/long-eaton/01.jpg`,
+  twitterCard: 'summary_large_image',
 })
 </script>

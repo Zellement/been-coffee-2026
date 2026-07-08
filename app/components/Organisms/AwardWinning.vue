@@ -34,7 +34,7 @@
               :key="awardIndex"
               class="flex w-full flex-col items-center gap-4"
             >
-              <img :src="award.logoUrl" alt="Award Logo" class="h-auto w-28" />
+              <img :src="award.logoUrl" alt="Award Logo" class="h-auto w-28" >
               <div class="font-krete text-center text-sm">
                 <div v-for="(yearGroup, yi) in award.details" :key="yi" class="mb-2">
                   <UBadge :label="yearGroup.year" class="mb-1" color="tertiary" />

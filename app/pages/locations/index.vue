@@ -25,15 +25,15 @@
 
 <script setup lang="ts">
 import childrenNav from '~/data/locations.json'
-useHead({
-  title:
-    'Locations | Been Coffee - Award-winning coffee shops in Willington, Derby & Long Eaton, Nottingham UK',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Find your local Been Coffee shop in Willington, Derby or Long Eaton, Nottingham. Enjoy our award-winning coffee, locally sourced food and welcoming atmosphere.',
-    },
-  ],
+const title =
+  'Locations | Been Coffee - Award-winning coffee shops in Willington, Derby & Long Eaton, Nottingham UK'
+const description =
+  'Find your local Been Coffee shop in Willington, Derby or Long Eaton, Nottingham. Enjoy our award-winning coffee, locally sourced food and welcoming atmosphere.'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
 })
 </script>

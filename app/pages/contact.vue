@@ -14,14 +14,14 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Contact - Been Coffee',
-  meta: [
-    {
-      name: 'description',
-      content:
-        "Get in touch with Been Coffee. Fill in the contact form and we'll respond as soon as possible.",
-    },
-  ],
+const title = 'Contact - Been Coffee'
+const description =
+  "Get in touch with Been Coffee. Fill in the contact form and we'll respond as soon as possible."
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
 })
 </script>

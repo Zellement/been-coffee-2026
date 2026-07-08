@@ -15,14 +15,14 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Media & Press - Been Coffee',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'For media inquiries, press releases, or to request high-resolution images/logos and interviews, please use the form below. We are happy to provide information about our company, products, and initiatives to journalists and media outlets.',
-    },
-  ],
+const title = 'Media & Press - Been Coffee'
+const description =
+  'For media inquiries, press releases, or to request high-resolution images/logos and interviews, please use the form below. We are happy to provide information about our company, products, and initiatives to journalists and media outlets.'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
 })
 </script>
