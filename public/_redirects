@@ -1,0 +1,9 @@
+# Redirects from the old been.coffee site to the 2026 rebuild.
+# Format: <from>  <to>  <status>  (Netlify normalises trailing slashes on the source)
+
+/where       /locations/willington/       301
+/bookings    /locations/willington/       301
+/reviews     /locations/willington/       301
+/events      /locations/willington/       301
+/about       /               301
+/faqs        /locations/willington/       301
