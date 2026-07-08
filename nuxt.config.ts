@@ -151,7 +151,8 @@ export default defineNuxtConfig({
         },
         {
           name: 'description',
-          content: 'An Effect Digital creation. Please change this description.',
+          content:
+            'Been Coffee is a coffee shop in Willington, Derby and Long Eaton, Nottingham. We serve high-quality coffee and delicious food in a cosy and welcoming atmosphere.',
         },
         { id: 'og-type', property: 'og:type', content: 'website' },
       ],

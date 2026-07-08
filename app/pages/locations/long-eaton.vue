@@ -123,8 +123,9 @@ const accordionItems: AccordionItem[] = [
   },
   {
     label: 'Are you hiring?',
-    content: 'We will be! Visit out <a href="https://linktr.ee/beencoffeeuk" target="_blank" rel="noopener noreferrer">Linktree</a> for more information.',
-  }
+    content:
+      'We will be! Visit out <a href="https://linktr.ee/beencoffeeuk" target="_blank" rel="noopener noreferrer">Linktree</a> for more information.',
+  },
   // {
   //   label: 'Do you have highchairs and baby changing facilities?',
   //   content:
@@ -165,7 +166,7 @@ const imagery: ImageryItem[] = [
 
 const title = 'Been Coffee Long Eaton - Coffee shop in Long Eaton, Nottingham'
 const description =
-  "Been Coffee's second location, boasting great coffee, delicious food and a warm welcome near West Park, Long Eaton, Nottinghamshire."
+  "Been Coffee's Long Eaton location, boasting great coffee, delicious food and a warm welcome near West Park, Long Eaton, Nottinghamshire, coming soon"
 
 defineOgImage('DefaultOgImage', {
   title: 'Been Coffee Long Eaton',

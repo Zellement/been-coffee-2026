@@ -1,4 +1,3 @@
 [build]
 publish = 'dist'
 base = '/'
-ignore = "node netlify/ignore_build.js"

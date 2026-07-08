@@ -244,7 +244,7 @@ const imagery: ImageryItem[] = [
 
 const title = 'Been Coffee Willington - Award-winning coffee shop in Willington, Derby'
 const description =
-  'Been Coffee is an award-winning coffee shop located in Willington, Derby. We serve high-quality coffee and delicious food in a cosy and welcoming atmosphere.'
+  'Been Coffee Willington is an award-winning coffee shop located in Willington, Derby. We serve high-quality coffee and delicious food in a cosy and welcoming atmosphere.'
 
 defineOgImage('DefaultOgImage', {
   title: 'Been Coffee Willington',

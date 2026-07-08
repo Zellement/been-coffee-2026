@@ -12,7 +12,7 @@ useHead({
     {
       name: 'description',
       content:
-        "Been Coffee's second location, boasting great coffee, delicious food and a warm welcome in the heart of Long Eaton, Nottinghamshire.",
+        'Been Coffee is an independent, award-winning coffee shop with amazing coffee, tea, bubble tea, boba tea, cakes, bagels, cobs & paninis in Willington, Derby & Long Eaton, Nottingham UK.',
     },
   ],
 })
