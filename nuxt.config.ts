@@ -159,7 +159,11 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'icon',
-          type: 'image/x-icon',
+          type: 'image/png',
+          href: '/favicon.png',
+        },
+        {
+          rel: 'apple-touch-icon',
           href: '/favicon.png',
         },
       ],
@@ -169,14 +173,6 @@ export default defineNuxtConfig({
 
   site: {
     trailingSlash: true, // handles everything if using Nuxt SEO
-  },
-
-  runtimeConfig: {
-    public: {
-      MARKER_ID: import.meta.env.MARKER_ID,
-      MARKER_ENABLED: import.meta.env.MARKER_ENABLED,
-      GTM_ID: import.meta.env.GTM_ID,
-    },
   },
 
   vite: {

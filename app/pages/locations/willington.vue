@@ -252,6 +252,47 @@ defineOgImage('DefaultOgImage', {
   imageUrl: `${origin}/media/locations/willington/01.jpg`,
 })
 
+useSchemaOrg([
+  defineLocalBusiness({
+    '@type': 'FoodEstablishment',
+    name: 'Been Coffee Willington',
+    description,
+    image: `${origin}/media/locations/willington/01.jpg`,
+    telephone: '+447592294650',
+    priceRange: '££',
+    servesCuisine: [
+      'Coffee',
+      'Tea',
+      'Hot Chocolate',
+      'Smoothies',
+      'Milkshakes',
+      'Cakes',
+      'Bagels',
+      'Paninis',
+      'Cobs',
+    ],
+    address: {
+      streetAddress: 'Derby & Burton Services, Etwall Road, Willington',
+      addressLocality: 'Willington',
+      addressRegion: 'Derbyshire',
+      postalCode: 'DE65 6DX',
+      addressCountry: 'GB',
+    },
+    openingHoursSpecification: [
+      {
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '07:00',
+        closes: '17:30',
+      },
+      {
+        dayOfWeek: ['Saturday', 'Sunday'],
+        opens: '07:30',
+        closes: '17:30',
+      },
+    ],
+  }),
+])
+
 useHead({
   title,
   meta: [

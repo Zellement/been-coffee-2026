@@ -174,6 +174,36 @@ defineOgImage('DefaultOgImage', {
   imageUrl: `${origin}/media/locations/long-eaton/01.jpg`,
 })
 
+// Opening Winter 2026 — address only, no opening hours or telephone so the
+// location is not marked up as currently operational.
+useSchemaOrg([
+  defineLocalBusiness({
+    '@type': 'FoodEstablishment',
+    name: 'Been Coffee Long Eaton',
+    description,
+    image: `${origin}/media/locations/long-eaton/01.jpg`,
+    priceRange: '££',
+    servesCuisine: [
+      'Coffee',
+      'Tea',
+      'Hot Chocolate',
+      'Smoothies',
+      'Milkshakes',
+      'Cakes',
+      'Bagels',
+      'Paninis',
+      'Cobs',
+    ],
+    address: {
+      streetAddress: 'Boots Court, Cranfleet Way',
+      addressLocality: 'Long Eaton',
+      addressRegion: 'Nottinghamshire',
+      postalCode: 'NG10 3RJ',
+      addressCountry: 'GB',
+    },
+  }),
+])
+
 useHead({
   title,
   meta: [
