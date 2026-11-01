@@ -40,13 +40,13 @@
             outline-class="after:text-butterscotch-500"
           />
         </div>
-        <p class="font-krete mt-4 text-lg">And soon in two locations.</p>
+        <p class="font-krete mt-4 text-lg">Now in two locations.</p>
         <div class="mt-4 flex gap-2">
           <UButtonDefault href="/locations/willington" color="neutral" variant="subtle">
             Willington
           </UButtonDefault>
           <UButtonDefault href="/locations/long-eaton" color="neutral" variant="subtle">
-            Long Eaton <UBadge variant="outline">Opening Soon</UBadge>
+            Long Eaton <UBadge variant="outline">Now Open</UBadge>
           </UButtonDefault>
         </div>
       </div>

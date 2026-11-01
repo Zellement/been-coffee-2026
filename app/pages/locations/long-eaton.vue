@@ -1,7 +1,7 @@
 <template>
   <UPage>
     <HeroStandard title-brow="Been Coffee" title="Long Eaton" />
-    <!-- <div class="container w-full lg:hidden">
+    <div class="container w-full lg:hidden">
       <div class="flex gap-2 overflow-x-auto p-2 pb-3">
         <UButton
           v-for="item in pageNav"
@@ -13,7 +13,7 @@
           >{{ item.name }}</UButton
         >
       </div>
-    </div> -->
+    </div>
     <div id="overview" class="container-px container grid py-4 lg:grid-cols-12 lg:gap-10">
       <UTimeline :default-value="2" :items="data" class="w-full lg:col-span-4">
         <template #title="{ item }">
@@ -51,7 +51,7 @@
         <FormTableBooking location="Willington" />
       </div> -->
 
-      <div id="bookTable" class="pt-12 lg:col-span-6">
+      <div id="faqs" class="pt-12 lg:col-span-6">
         <h2 class="flex flex-col">
           <DualLineText class="text-xl" :text="`Frequently Asked`" level="span" />
           <DualLineText
@@ -88,85 +88,111 @@
           </template>
         </UAccordion>
       </div>
-      <!-- <div id="directions" class="lg:col-span-6 pt-12">
+      <div id="team" class="@container col-span-full pt-12 lg:col-span-6">
+        <h2 class="flex flex-col">
+          <DualLineText class="text-xl" :text="`Meet the`" level="span" />
+          <DualLineText
+            class="text-tuscany-500 -mt-1 mb-4 text-2xl"
+            :text="`Managers`"
+            level="span"
+          />
+        </h2>
+        <div class="xs:grid-cols-2 grid grid-cols-1 gap-6">
+          <UCard v-for="(item, index) in team" :key="index" class="">
+            <template #header>
+              <NuxtImg width="500" height="650" :src="item.image" fit="cover" position="top" />
+            </template>
+            <div class="flex flex-col items-start gap-2">
+              <h2 class="text-lg font-bold">{{ item.label }}</h2>
+              <UBadge color="tertiary" variant="outline" :label="item.labelSuffix" />
+              <p class="text-sm">{{ item.description }}</p>
+            </div>
+          </UCard>
+        </div>
+      </div>
+
+      <div id="directions" class="col-span-full pt-12 lg:col-span-6">
         <LocationGetDirections postcode="Boots Court, NG10 3RJ" label="Been Coffee Long Eaton" />
-      </div> -->
+      </div>
     </div>
   </UPage>
 </template>
 
 <script setup lang="ts">
 import type { TimelineItem, AccordionItem } from '@nuxt/ui'
-// import Faqs from '~/data/faqs.json'
+import Faqs from '~/data/faqs.json'
+import TeamMembers from '~/data/team.json'
 
 const { origin } = useRequestURL()
 
-// const pageNav = [
-//   { name: 'Opening Hours', href: '#overview' },
-//   { name: 'Address', href: '#overview' },
-//   { name: 'Telephone', href: '#overview' },
-//   { name: 'Gallery', href: '#gallery' },
-//   { name: 'Book a Table', href: '#bookTable' },
-//   { name: 'Directions', href: '#directions' },
-// ]
+const pageNav = [
+  { name: 'Opening Hours', href: '#overview' },
+  { name: 'Address', href: '#overview' },
+  { name: 'Telephone', href: '#overview' },
+  { name: 'Gallery', href: '#gallery' },
+  { name: 'FAQs', href: '#faqs' },
+  { name: 'Team', href: '#team' },
+  { name: 'Directions', href: '#directions' },
+]
+
+const team = [
+  ...TeamMembers,
+  {
+    label: 'Shelley',
+    labelSuffix: 'Assistant Manager',
+    description:
+      'Our lovely Assistant Manager Shelley is at the heart of our Long Eaton shop. With a big smile and a warm welcome for everyone who walks through the door, she makes sure your visit is a great one and is always happy to help with anything you need.',
+    image: '/media/locations/long-eaton/shelley.jpg',
+  },
+]
 
 const accordionItems: AccordionItem[] = [
-  // ...Faqs,
-  {
-    label: 'When do you open?',
-    content: 'We are currently under construction and will be opening in Winter 2026.',
-  },
+  ...Faqs.filter((faq: AccordionItem): boolean => faq.label !== 'Do you have any job vacancies?'),
   {
     label: 'What is parking like?',
     content:
       'There is fast turnover of cars on a daily basis as people tend to visit and go. There is street parking over the road, too, for busier days.',
   },
   {
-    label: 'Are you hiring?',
+    label: 'Do you have highchairs and baby changing facilities?',
     content:
-      'We will be! Visit out <a href="https://linktr.ee/beencoffeeuk" target="_blank" rel="noopener noreferrer">Linktree</a> for more information.',
+      "We have two highchairs available for use and a baby changing station. Please be advised these are used at the customer's own risk.",
   },
-  // {
-  //   label: 'Do you have highchairs and baby changing facilities?',
-  //   content:
-  //     "We have two highchairs available for use and a fold-away baby changing station in the accessible toilet. Please be advised these are used at the customer's own risk.",
-  // },
 ]
 
 const data: TimelineItem[] = [
-  // {
-  //   date: 'Opening Hours',
-  //   title: 'Monday - Friday: 07:00 - 17:30<br />Saturday - Sunday: 08:00 - 17:30',
-  //   icon: 'mdi-clock-outline',
-  // },
+  {
+    date: 'Opening Hours',
+    title: 'Monday - Friday: 07:00 - 17:30<br />Saturday - Sunday: 08:00 - 17:30',
+    icon: 'mdi-clock-outline',
+  },
   {
     date: 'Address',
     title: 'Boots Court,<br />Cranfleet Way,<br />Long Eaton,<br />Nottinghamshire<br />NG10 3RJ',
     icon: 'mdi-map-marker-outline',
   },
-
   {
-    date: 'Opening',
-    title: 'Winter 2026',
+    date: 'Telephone',
+    title: '<a href="tel:07598 889 434">07598 889 434</a>',
+    icon: 'mdi-phone-outline',
+  },
+  {
+    date: 'Opened',
+    title: 'Monday 2nd November 2026',
     icon: 'mdi-calendar-month-outline',
   },
-  // {
-  //   date: 'Telephone',
-  //   title: '<a href="tel:07592 294 650">07592 294 650</a>',
-  //   icon: 'mdi-phone-outline',
-  // },
 ]
 
 const imagery: ImageryItem[] = [
   {
     src: '/media/locations/long-eaton/01.jpg',
-    alt: 'Mock up of Long Eaton location',
+    alt: 'Outside Long Eaton shop',
   },
 ]
 
-const title = 'Been Coffee Long Eaton - Coffee shop in Long Eaton, Nottingham'
+const title = 'Been Coffee Long Eaton - Independent coffee shop in Long Eaton, Nottingham'
 const description =
-  "Been Coffee's Long Eaton location, boasting great coffee, delicious food and a warm welcome near West Park, Long Eaton, Nottinghamshire, coming soon"
+  "Been Coffee's Long Eaton location, boasting great coffee, delicious food and a warm welcome near West Park, Long Eaton, Nottinghamshire. Now open!"
 
 defineOgImage('DefaultOgImage', {
   title: 'Been Coffee Long Eaton',
@@ -174,14 +200,13 @@ defineOgImage('DefaultOgImage', {
   imageUrl: `${origin}/media/locations/long-eaton/01.jpg`,
 })
 
-// Opening Winter 2026 — address only, no opening hours or telephone so the
-// location is not marked up as currently operational.
 useSchemaOrg([
   defineLocalBusiness({
     '@type': 'FoodEstablishment',
     name: 'Been Coffee Long Eaton',
     description,
     image: `${origin}/media/locations/long-eaton/01.jpg`,
+    telephone: '+447598889434',
     priceRange: '££',
     servesCuisine: [
       'Coffee',
@@ -201,6 +226,19 @@ useSchemaOrg([
       postalCode: 'NG10 3RJ',
       addressCountry: 'GB',
     },
+    sameAs: ['https://www.facebook.com/beencoffeelongeaton'],
+    openingHoursSpecification: [
+      {
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '07:00',
+        closes: '17:30',
+      },
+      {
+        dayOfWeek: ['Saturday', 'Sunday'],
+        opens: '08:00',
+        closes: '17:30',
+      },
+    ],
   }),
 ])
 
