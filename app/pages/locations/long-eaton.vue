@@ -1,6 +1,17 @@
 <template>
   <UPage>
-    <HeroStandard title-brow="Been Coffee" title="Long Eaton" />
+    <HeroStandard title-brow="Been Coffee" title="Long Eaton">
+      <UModal fullscreen title="Order for collection">
+        <UButtonDefault color="secondary" target="_blank">Order for collection </UButtonDefault>
+
+        <template #body>
+          <iframe
+            src="https://goodeats.io/been-coffee-long-eaton?embed_outlet=been-coffee-long-eaton"
+            class="h-full w-full"
+          />
+        </template>
+      </UModal>
+    </HeroStandard>
     <div class="container w-full lg:hidden">
       <div class="flex gap-2 overflow-x-auto p-2 pb-3">
         <UButton
