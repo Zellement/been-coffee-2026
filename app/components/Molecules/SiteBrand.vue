@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/" class="flex pointer-events-auto">
+  <NuxtLink to="/" class="pointer-events-auto flex">
     <span class="sr-only">Go to the homepage</span>
     <icon name="theme:logo" :class="props.iconClasses || 'size-18'" />
   </NuxtLink>

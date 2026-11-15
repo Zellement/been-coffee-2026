@@ -1,11 +1,11 @@
 <template>
   <header
     role="banner"
-    class="fixed top-0 right-0 left-0 z-50 w-full py-4 pointer-events-none transition-transform duration-500"
+    class="pointer-events-none fixed top-0 right-0 left-0 z-50 w-full py-4 transition-transform duration-500"
   >
-    <div class="container container-px grid-layout">
+    <div class="container-px grid-layout container">
       <div
-        class="relative col-span-full row-start-1 flex items-center flex-col md:flex-row gap-2 justify-between"
+        class="relative col-span-full row-start-1 flex flex-col items-center justify-between gap-2 md:flex-row"
       >
         <SiteBrand />
         <SiteNav class="justify-center md:justify-end" />

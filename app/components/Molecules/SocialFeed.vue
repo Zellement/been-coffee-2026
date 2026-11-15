@@ -1,11 +1,10 @@
 <template>
-<div>
-  <div id="curator-feed-default-feed-layout"/>
-</div>
+  <div>
+    <div id="curator-feed-default-feed-layout" />
+  </div>
 </template>
 
 <script lang="ts" setup>
-
 useHead({
   script: [
     {
@@ -15,5 +14,4 @@ useHead({
     },
   ],
 })
-
 </script>

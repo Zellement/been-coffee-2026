@@ -1,20 +1,20 @@
 <template>
-  <div class="container text-white py-16 text-center container-px">
-    <h2 class="flex flex-col mb-12">
+  <div class="container-px container py-16 text-center text-white">
+    <h2 class="mb-12 flex flex-col">
       <DualLineText
         text="Bagels,"
         level="span"
-        class="text-3xl text-butterscotch-500 mx-auto"
+        class="text-butterscotch-500 mx-auto text-3xl"
         outline-class="after:text-white"
       />
       <DualLineText
         text="Bacon & Brownies."
         level="span"
-        class="text-3xl text-butterscotch-500 mx-auto"
+        class="text-butterscotch-500 mx-auto text-3xl"
         outline-class="after:text-white"
       />
     </h2>
-    <p class="max-w-160 mx-auto font-krete text-lg">
+    <p class="font-krete mx-auto max-w-160 text-lg">
       We offer a variety of both food and drink options, including
       <span class="text-butterscotch-500">thick cut butcher bacon & Philadelphia bagels</span>,
       <span class="text-butterscotch-500">award-winning sausage cobs and bacon cobs</span>,
@@ -24,7 +24,7 @@
     </p>
     <UCarousel
       v-slot="{ item }"
-      class="mt-20 mx-20"
+      class="mx-20 mt-20"
       :ui="{
         item: 'basis-full md:basis-1/2 xl:basis-1/3 aspect-square',
       }"
@@ -36,7 +36,7 @@
       <nuxt-img
         :src="item.src"
         :alt="item.alt"
-        class="object-cover h-full w-full rounded-lg overflow-hidden"
+        class="h-full w-full overflow-hidden rounded-lg object-cover"
       />
     </UCarousel>
     <UButtonDefault class="mt-20" color="secondary" to="/gallery">

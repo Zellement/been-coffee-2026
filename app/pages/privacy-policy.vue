@@ -1,7 +1,7 @@
 <template>
   <UPage>
     <HeroStandard title="Privacy Policy" />
-    <div class="container container-px py-12">
+    <div class="container-px container py-12">
       <div class="prose">
         <h2>Introduction</h2>
         <p>

@@ -5,7 +5,8 @@
     "no-invalid-position-declaration": null,
     "no-descending-specificity": null,
     "selector-id-pattern": null,
-    "custom-property-pattern": "^[a-z][a-z0-9-/*]*$"
+    "custom-property-pattern": "^[a-z][a-z0-9-/*]*$",
+    "number-max-precision": 5
   },
   "ignoreFiles": ["vendor/**/*", "node_modules/**/*", "**/*.min.css"]
 }
