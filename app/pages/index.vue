@@ -1,9 +1,9 @@
 <template>
   <UPage>
     <HeroHomepage />
-    <section class="bg-linear-to-br from-navy-400 -mt-40 pt-40 via-navy-500 to-navy-700">
+    <section class="from-navy-400 via-navy-500 to-navy-700 -mt-40 bg-linear-to-br pt-40">
       <div class="container px-8 text-white">
-        <p class="text-center max-w-160 mx-auto py-20 text-lg font-krete">
+        <p class="font-krete mx-auto max-w-160 py-20 text-center text-lg">
           <span class="text-butterscotch-500">Award-winning</span>,
           <span class="text-butterscotch-500">independent</span>,
           <span class="text-butterscotch-500">environmentally-friendly</span>,
@@ -14,11 +14,11 @@
         </p>
       </div>
     </section>
-    <section class="bg-linear-to-tl from-seashell-50 to-seashell-600">
+    <section class="from-seashell-50 to-seashell-600 bg-linear-to-tl">
       <AwardWinning />
     </section>
 
-    <section class="bg-linear-to-tl from-tuscany-400 to-tuscany-600">
+    <section class="from-tuscany-400 to-tuscany-600 bg-linear-to-tl">
       <IndexGallery />
     </section>
 
@@ -26,7 +26,7 @@
       <VeganLowGluten />
     </section>
 
-    <section class="bg-linear-to-br from-tuscany-500 to-tuscany-600">
+    <section class="from-tuscany-500 to-tuscany-600 bg-linear-to-br">
       <CommittedToSustainability />
     </section>
 

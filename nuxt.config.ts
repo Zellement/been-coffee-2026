@@ -27,6 +27,22 @@ export default defineNuxtConfig({
     redirect: false,
   },
 
+  // Override at runtime with NUXT_* env vars, e.g. NUXT_BREVO_API_KEY, NUXT_PUBLIC_TURNSTILE_SITE_KEY
+  runtimeConfig: {
+    brevoApiKey: '',
+    brevoSenderEmail: '',
+    brevoSenderName: 'Been Coffee',
+    bookingEmailWillington: '',
+    bookingEmailLongEaton: '',
+    contentfulSpaceId: '',
+    contentfulEnvironmentId: 'master',
+    contentfulCmaAccessToken: '',
+    turnstileSecretKey: '',
+    public: {
+      turnstileSiteKey: '',
+    },
+  },
+
   experimental: {
     defaults: {
       nuxtLink: {

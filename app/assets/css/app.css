@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-@plugin "@tailwindcss/typography";
-
 @import '@nuxt/ui';
 
 /* Base theme */
@@ -9,4 +7,5 @@
 @import './_base/typography.css';
 @import './_base/transitions.css';
 
+@plugin '@tailwindcss/typography';
 @plugin 'tailwindcss-debug-screens';

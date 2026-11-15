@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full flex flex-col h-full">
+  <div class="flex h-full w-full flex-col">
     <h2 class="flex flex-col">
       <DualLineText class="text-xl" text="Get" level="span" />
-      <DualLineText class="mb-4 -mt-1 text-2xl text-tuscany-500" text="Directions" level="span" />
+      <DualLineText class="text-tuscany-500 -mt-1 mb-4 text-2xl" text="Directions" level="span" />
     </h2>
     <UButtonDefault
       :href="directionsUrl"
@@ -12,10 +12,10 @@
     >
       Open in Google Maps
     </UButtonDefault>
-    <div class="w-full rounded-lg h-full overflow-hidden flex">
+    <div class="flex h-full w-full overflow-hidden rounded-lg">
       <iframe
         :src="embedUrl"
-        class="w-full h-full border-0 object-cover"
+        class="h-full w-full border-0 object-cover"
         allowfullscreen
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"

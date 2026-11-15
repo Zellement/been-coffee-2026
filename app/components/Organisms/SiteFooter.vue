@@ -1,23 +1,23 @@
 <template>
   <div class="flex w-full py-4">
-    <footer role="contentinfo" class="flex container container-px w-full justify-between">
+    <footer role="contentinfo" class="container-px container flex w-full justify-between">
       <div class="flex flex-col">
         <div class="flex items-center justify-start gap-2">
           <div class="h-10">
             <SiteBrand icon-classes="size-10" />
           </div>
-          <p class="flex flex-row gap-1 text-xs items-center">
+          <p class="flex flex-row items-center gap-1 text-xs">
             <span>&copy;</span> Been Coffee House Ltd <span>{{ date }}</span>
           </p>
         </div>
-        <ul class="mt-4 text-xs flex gap-4">
+        <ul class="mt-4 flex gap-4 text-xs">
           <li><ULink to="/media-press">Media & Press</ULink></li>
           <li><ULink to="/privacy-policy">Privacy Policy</ULink></li>
           <li><ULink to="/contact">Contact</ULink></li>
         </ul>
       </div>
       <div class="flex">
-        <ul class="flex flex-row gap-2 items-center justify-end">
+        <ul class="flex flex-row items-center justify-end gap-2">
           <li v-for="link in socialLinks" :key="link.name">
             <a
               :href="link.href"

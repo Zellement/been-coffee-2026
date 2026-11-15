@@ -2,7 +2,7 @@
   <component
     :is="level"
     :data-text="text"
-    class="relative inline-block whitespace-nowrap font-riverside after:absolute after:inset-0 after:h-full after:w-full after:translate-x-0.5 after:translate-y-1 after:whitespace-nowrap after:font-riverside-outline after:content-[attr(data-text)]"
+    class="font-riverside after:font-riverside-outline relative inline-block whitespace-nowrap after:absolute after:inset-0 after:h-full after:w-full after:translate-x-0.5 after:translate-y-1 after:whitespace-nowrap after:content-[attr(data-text)]"
     :class="[backgroundClass, outlineClass]"
   >
     {{ text }}
