@@ -28,6 +28,7 @@
     <div id="overview" class="container-px container grid py-4 lg:grid-cols-12 lg:gap-10">
       <UTimeline :default-value="2" :items="data" class="w-full lg:col-span-4">
         <template #title="{ item }">
+          <!-- eslint-disable-next-line vue/no-v-html -- hard-coded markup defined in this file -->
           <p v-html="item.title" />
         </template>
       </UTimeline>
@@ -61,7 +62,7 @@
       </div>
 
       <div id="bookTable" class="pt-12 lg:col-span-6">
-        <FormTableBooking location="Willington" />
+        <FormTableBooking location="willington" />
       </div>
 
       <div id="faqs" class="pt-12 lg:col-span-6">
