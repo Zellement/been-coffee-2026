@@ -87,7 +87,7 @@
     <div
       v-if="success"
       ref="completeMessage"
-      class="mt-8 scroll-m-8 rounded bg-green-700 px-2 py-1 text-white"
+      class="mt-8 scroll-m-10 rounded bg-green-700 px-4 py-3 text-white"
     >
       <p class="text-center">
         Thank you, your table is booked! We've sent a confirmation to your email.

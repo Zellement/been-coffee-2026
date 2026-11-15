@@ -36,7 +36,7 @@ export const bookingLocations: Record<BookingLocationKey, BookingLocation> = {
 
 export const bookingLimits = {
   minPeople: 1,
-  maxPeople: 30,
+  maxPeople: 8,
   maxDaysAhead: 180,
   maxNameLength: 100,
   maxDetailsLength: 1000,
