@@ -41,8 +41,12 @@ const rowsToHtml = (rows: DetailRow[]): string =>
 const rowsToText = (rows: DetailRow[]): string =>
   rows.map((row: DetailRow): string => `${row.label}: ${row.value}`).join('\n')
 
+// Hosted PNG: Gmail and Outlook don't render SVG in emails. Served from public/email/.
+const LOGO_URL = 'https://www.been.coffee/email/been-coffee-logo.png'
+const LOGO_HTML = `<img src="${LOGO_URL}" width="120" height="120" alt="Been Coffee" style="display:block;width:120px;height:auto;border:0;margin:0 0 16px">`
+
 const wrapHtml = (intro: string, rows: DetailRow[], outro: string): string =>
-  `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:#222">${intro}<table style="border-collapse:collapse;margin:16px 0">${rowsToHtml(rows)}</table>${outro}</div>`
+  `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5;color:#222">${LOGO_HTML}${intro}<table style="border-collapse:collapse;margin:16px 0">${rowsToHtml(rows)}</table>${outro}</div>`
 
 export const customerConfirmationEmail = (booking: BookingEmailData): TransactionalEmail => {
   const rows = detailRows(booking, false)
